@@ -1,0 +1,322 @@
+//Job element styling
+
+//--------------------------------
+// Content of Job Block Styling
+//--------------------------------
+
+.job__tag {
+  border: 2px $brand-color solid;
+  padding: 0.2em 0.5em;
+  border-radius: $base-border-radius;
+  text-transform: uppercase;
+}
+
+.job__title {
+  margin: 0.75em 0 0 0;
+}
+
+.job__desc {
+  margin: 0.5em 0 0 0;
+  font-weight: 300;
+}
+
+.job__salary-location {
+  font-size: $small-font-size;
+  margin: 0.75em 0 0.2em;
+}
+
+.no-jobs {
+  background-color: $light-section-color;
+  padding: 1em 0 0 0;
+  border-top: $base-border;
+  text-align: center;
+}
+
+
+
+//-------------------------------- END
+
+.job-main {
+  overflow-x: hidden;
+  background: linear-gradient(left, #fafafa 0%, #fafafa 49%, #f0f0f0 51%, #f0f0f0 100%);
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.job-main::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  display: none;
+  content: "mobile";
+}
+
+.job-main > * {
+  transition: transform 0.5s 0.4s;
+}
+
+.job-main.fold-is-open > * {
+  /* on mobile - translate .job-main content to the right when the .job-folding-panel is open */
+  transform: translateX(100%);
+  transition: transform 0.5s 0s;
+}
+@media only screen and (min-width: 600px) {
+  .job-main.fold-is-open > * {
+    transform: translateX(600px);
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .job-main::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: "desktop";
+  }
+
+  .job-main.fold-is-open > * {
+    /* reset style - on bigger devices we translate the gallery items */
+    transform: translateX(0);
+  }
+}
+
+.job-gallery::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.job-item {
+  width: 100%;
+  text-align: left;
+  /* Force Hardware Acceleration */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: transform 0.5s 0.4s;
+  z-index: 20;
+  padding: 2em;
+
+  &:nth-of-type(even) {
+    background-color: #fafafa;
+  }
+
+  &:nth-of-type(odd) {
+    background-color: #f0f0f0;
+  }
+
+  @include media($m) {
+    padding: 3em;
+
+    &:nth-of-type(4n+1),
+    &:nth-of-type(2n) {
+      background-color: #fafafa;
+    }
+
+    &:nth-of-type(4n+2),
+    &:nth-of-type(4n+3) {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+
+  .fold-is-open .job-item {
+    transition: transform 0.5s 0s;
+    transform: translateX(-400px);
+
+    * {
+      opacity: 0.5;
+      transition: opacity $base-duration;
+    }
+  }
+
+  .fold-is-open .job-item:nth-of-type(2n) {
+    transform: translateX(400px);
+  }
+}
+
+/* --------------------------------
+
+folding panel
+
+-------------------------------- */
+.job-folding-panel {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  transition: visibility 0s 0.9s;
+}
+
+.job-folding-panel .job-fold-left,
+.job-folding-panel .job-fold-right {
+  /* the :after elements of .job-job-fold-left and .job-fold-right are the 2 fold sides */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  /* enable a 3D-space for children elements */
+  perspective: 2000px;
+}
+
+.job-folding-panel .job-fold-left::after,
+.job-folding-panel .job-fold-right::after {
+  /* 2 fold sides */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* Force Hardware Acceleration */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: transform 0.5s 0.4s, background-color 0.5s 0.4s;
+}
+
+.job-folding-panel .job-fold-right {
+  perspective-origin: 0% 50%;
+}
+
+.job-folding-panel .job-fold-right::after {
+  transform-origin: right center;
+  transform: translateX(-100%) rotateY(-90deg);
+  background-color: #c0c3c3;
+}
+
+.job-folding-panel .job-fold-left {
+  /* on mobile only the right fold side is visible */
+  display: none;
+}
+
+.job-folding-panel .job-fold-left::after {
+  background-color: #f9fafa;
+}
+
+.job-folding-panel .job-close {
+  /* 'X' close icon */
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  height: 44px;
+  width: 44px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s 0s;
+}
+
+.job-folding-panel .job-close::after,
+.job-folding-panel .job-close::before {
+  /* lines of 'X' icon */
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  left: 50%;
+  top: 50%;
+  background-color: $brand-color;
+  backface-visibility: hidden;
+  transition: opacity 0.2s;
+}
+
+.job-folding-panel .job-close::after {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.job-folding-panel .job-close::before {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.job-folding-panel.is-open {
+  visibility: visible;
+  transition: visibility 0s 0s;
+}
+
+.job-folding-panel.is-open .job-fold-right::after,
+.job-folding-panel.is-open .job-fold-left::after {
+  transform: translateX(0);
+  transition: transform 0.5s 0s, background-color 0.5s 0s;
+}
+
+.job-folding-panel.is-open .job-fold-right::after {
+  background-color: #f9fafa;
+}
+
+.job-folding-panel.is-open .job-close {
+  opacity: 1;
+  transition: opacity 0.2s 0.5s;
+}
+
+@media only screen and (min-width: 600px) {
+  .job-folding-panel {
+    width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .job-folding-panel {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 800px;
+  }
+
+  .job-folding-panel .job-fold-left,
+  .job-folding-panel .job-fold-right {
+    width: 50%;
+    float: left;
+    height: 100%;
+  }
+
+  .job-folding-panel .job-fold-right {
+    perspective-origin: 0% 50%;
+  }
+
+  .job-folding-panel .job-fold-right::after {
+    transform-origin: right center;
+    transform: translateX(-100%) rotateY(-90deg);
+  }
+
+  .job-folding-panel .job-fold-left {
+    display: block;
+    perspective-origin: 100% 50%;
+  }
+
+  .job-folding-panel .job-fold-left::after {
+    transform-origin: left center;
+    transform: translateX(100%) rotateY(90deg);
+  }
+}
+
+.job-fold-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 4em 2em;
+  visibility: hidden;
+  transition: visibility 0s 0.4s;
+}
+
+.is-open .job-fold-content {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  visibility: visible;
+  transition: visibility 0s 0.5s;
+}
+
+.is-open .job-fold-content > * {
+  opacity: 1;
+}
+
+
+@media only screen and (min-width: 1100px) {
+  .job-fold-content {
+    padding: 4em;
+  }
+}

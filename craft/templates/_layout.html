@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if title is defined %}{{ title }} | {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<meta name="description" content="{{ seo.description }}">
+	<meta name="keywords" content="{% for tag in seo.tags %}{{ tag.title }}, {% endfor %}">
+	<meta name="author" content="Cadence Partners">
+
+	<link rel="stylesheet" type="text/css" href="{{ siteUrl }}assets/css/main.css?v=2">
+
+	<link rel="icon" href="{{ siteUrl }}assets/images/site/favicon.png">
+
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+	<!-- Facebook Properties -->
+	<meta property="og:title" content="{{ title }}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{{ entry.url }}" />
+	<meta property="og:image" content="{{siteUrl}}assets/images/site/background.jpg"/>
+	<meta property="og:description" content="{{ seo.description }}" />
+
+	<!-- Twitter Properties -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@CadencePartners" />
+	<meta name="twitter:title" content="{{ title }}" />
+	<meta name="twitter:description" content="{{ seo.description }}" />
+	<meta name="twitter:image" content="{{siteUrl}}assets/images/site/background.jpg" />
+	<meta name="twitter:image:alt" content="{{ title }}" />
+
+</head>
+
+
+<body class="">
+	<div class="container top-nav">
+		<header class="row header">
+			<div class="item item--quarter logo-container">
+					<a href="{{ siteUrl }}"><img class="logo" src="{{ siteUrl }}assets/images/site/logo.png"/></a>
+			</div>
+
+			<nav class="item item--threequarters nav-container">
+				<button class="nav-toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </button>
+
+				<ul class="nav nav--main">
+          <a href="{{ siteUrl }}" class="nav__item"><li>Home</li></a>
+					<a href="{{ siteUrl }}about" class="nav__item"><li>About&nbsp;Us</li></a>
+					<a href="{{ siteUrl }}services" class="nav__item"><li>Services</li></a>
+					<a href="{{ siteUrl }}approach" class="nav__item"><li>Approach</li></a>
+					<a href="{{ siteUrl }}for-clients" class="nav__item"><li>Clients</li></a>
+          <a href="{{ siteUrl }}for-candidates" class="nav__item"><li>Candidates</li></a>
+          {% if seo.newsActive %}
+          <a href="{{ siteUrl }}news" class="nav__item"><li>News</li></a>
+          {% endif %}
+          <a href="{{ siteUrl }}jobs" class="nav__item nav__item--special"><li>Job&nbsp;Search</li></a>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+
+
+	<main id="content" role="main">
+		{% block content %}
+
+		<!-- This is where the main content of the page goes-->
+
+		{% endblock %}
+	</main>
+
+
+
+  <footer class="container footer" id="footer">
+    <div class="row">
+      <div class="item footer__left">
+        <a href="{{ siteUrl }}"><img class="logo" src="{{ siteUrl }}assets/images/site/logo--white.png"/></a>
+
+        <div class="social-links">
+          <a alt="Twitter" target="_blank" href="https://twitter.com/cadencepartners"><i class="fab fa-twitter-square"></i></a>
+          <a alt="LinkedIn" target="_blank" href="https://www.linkedin.com/company/cadence-partners"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="item footer__right">
+        <nav class="footer__nav">
+          <ul class="nav nav--secondary footer-links">
+            <a href="{{ siteUrl }}" class="nav__item"><li>Home</li></a>
+  					<a href="{{ siteUrl }}about" class="nav__item"><li>About&nbsp;Us</li></a>
+						<a href="{{ siteUrl }}services" class="nav__item"><li>Services</li></a>
+						<a href="{{ siteUrl }}approach" class="nav__item"><li>Approach</li></a>
+  					<a href="{{ siteUrl }}for-clients" class="nav__item"><li>Clients</li></a>
+            <a href="{{ siteUrl }}for-candidates" class="nav__item"><li>Candidates</li></a>
+            {% if seo.newsActive %}
+            <a href="{{ siteUrl }}news" class="nav__item"><li>News</li></a>
+            {% endif %}
+            <a href="{{ siteUrl }}contact-us" class="nav__item"><li>Contact&nbsp;Us</li></a>
+            <a href="{{ siteUrl }}jobs" class="nav__item nav__item--special"><li>Job&nbsp;Search</li></a>
+  				</ul>
+        </nav>
+
+        <small class="credit"><a href="#" target="_blank">Privacy Policy</a> • &copy; 2018 Cadence Partners • Design by <a href="http://websites.byhoxby.com/" target="_blank">Hoxby</a></small>
+      </div>
+    </div>
+	</footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{{ siteUrl }}assets/js/load-min.js"></script>
+<script src="{{ siteUrl }}assets/js/vendor/unslider.js"></script>
+
+
+<script>
+  $(document).ready(function() {
+    $('.testimonial-slider').unslider({
+      autoplay: true,
+      delay: 10000,
+      keys: true,
+      animateHeight: true,
+      arrows: {
+        prev: '<a class="unslider-arrow prev"><i class="fas fa-3x fa-arrow-left"></i></a>',
+      	next: '<a class="unslider-arrow next"><i class="fas fa-3x fa-arrow-right"></i></a>',
+      }
+    });
+  });
+</script>
+
+
+</html>

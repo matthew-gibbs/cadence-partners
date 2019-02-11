@@ -1,0 +1,8 @@
+<div class="container bottom-cta-container">
+  <div class="row bottom-cta-row">
+    <div class="item item--third bottom-cta">
+      <h2 class="bottom-cta__heading">{{ ctaMessage is not empty ? ctaMessage : "Get in contact with us, and see what we can do for you." }}</h2>
+      <a class="btn--secondary" href="{{ ctaLocation is not empty ? ctaLocation : siteUrl ~ 'contact-us' }}">{{ ctaButtonText is not empty ? ctaButtonText : "Contact Us" }}</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{% extends "_layout" %}
+{% set title = "Services" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--services">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">Services</h1>
+      <h2 class="hero__strap">Discover what we can do for you and your business.</h2>
+    </div>
+  </div>
+</div>
+
+<!--Service Block-->
+{% include "_includes/_service-container.html"  with {
+  'icon': "assets/images/site/icons/sitting-crane.svg",
+  'serviceTitle': "Executive Search",
+  'serviceDesc': "Organisations are arguably only as good as their people, especially in social sectors. Executive talent is the key to success; flawed appointments are risky, costly and pointless.",
+  'url': url('services/executive-search')
+} %}
+{% include "_includes/_service-container.html"  with {
+  'icon': "assets/images/site/icons/rhino.svg",
+  'serviceTitle': "Interim Management",
+  'serviceDesc': "High quality executive interims can provide a competitive advantage, often transforming businesses and driving positive social impact for change-orientated organisations.",
+  'url': url('services/interim-management')
+} %}
+{% include "_includes/_service-container.html"  with {
+  'icon': "assets/images/site/icons/elephant.svg",
+  'serviceTitle': "Advisory Services",
+  'serviceDesc': "Cadence Partners is a leading specialist in the development of high quality executive talent that gives organisations the capability to be modern and inclusive.",
+  'url': url('services/advisory-services')
+} %}
+
+
+
+{% endblock %}

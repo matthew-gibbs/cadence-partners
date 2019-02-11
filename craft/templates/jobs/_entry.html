@@ -1,0 +1,25 @@
+{% extends "_layout" %}
+{% set title = entry.title %}
+
+{% block content %}
+
+
+<article class="container job-description">
+  <div class="row">
+    <div class="item item--twothirds">
+      <article id="jobDescription">
+        <small class="job__tag">Closing Date: {{ entry.expiryDate.format('d.m.y') }}</small>
+        <h1 class="job__title">{{ entry.title }}</h1>
+        <p class="job__salary-location">{{ entry.salary }} • {{ entry.location }}</p>
+        <div class="job__desc">
+          {{ entry.jobDescription }}
+        </div>
+        <h4 class="job__how-to-apply">How To Apply</h4>
+        <div class="how-to-apply">
+          {{ entry.applicationDetails }}
+        </div>
+      </article>
+    </div>
+  </div>
+</article>
+{% endblock %}

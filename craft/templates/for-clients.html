@@ -1,0 +1,78 @@
+{% extends "_layout" %}
+{% set title = "Clients" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--clients">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">{{ entry.mainPageHeading }}</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--half">
+      <p class="feature__desc">Our clients are organisations that make a difference through social impact and change. They span the third sector, central and local government, not for profit, healthcare and sporting organisations. <br><br>
+
+      We ensure that they feel they are investing wisely by carrying out the rigorous consultative and research work required, mitigating risk and delivering top performers from around the world. We shape to their requirements, drawing in resources from our pool of talented consultants, researchers and experts to deliver exactly what they need, when they need it.
+      </p>
+    </div>
+    <div class="item item--full">
+      <div class="logos-container">
+        <img src="{{ siteUrl }}assets/images/site/partner-logos/OpusPartners.png" alt="Opus Partners">
+        <img src="{{ siteUrl }}assets/images/site/partner-logos/Club.png" alt="Club">
+        <img src="{{ siteUrl }}assets/images/site/partner-logos/HR.png" alt="HR">
+        <img src="{{ siteUrl }}assets/images/site/partner-logos/Phast.png" alt="Phast">
+        <img src="{{ siteUrl }}assets/images/site/partner-logos/PositionIgnition.png" alt="Position Ignition">
+        <img src="{{ siteUrl }}assets/images/site/partner-logos/Tick.png" alt="Tick">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--half">
+      <h3 class="feature__heading">With new clients</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">Throughout your journey, we will work closely with you to understand your immediate needs, short term goals and longer term strategies. We will apply our knowledge of executive talent pools within the sectors we operate and create productive partnerships with our clients. It’s not uncommon for our clients to stay with us for many years over multiple assignments. <br><br>
+
+      We’ll examine your business, your objectives and your goals. Then, we’ll assign you the most suitable, highly qualified people from our staff pool of experts. They will find you the very best creative solutions to your problems so that your business can thrive.
+      </p>
+    </div>
+    <div class="item item--half">
+      <h3 class="feature__heading">Disciplines we cover include</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">We offer talent acquisition solutions across permanent and interim positions at senior executive and board level. These include:</p>
+      <ul class="bullets">
+        <li>Process-driven, transparent executive searches and response handling</li>
+        <li>Discerning and agile interim management</li>
+        <li>Leadership development consultancy from renowned specialists</li>
+        <li>Expert talent consultancy to help businesses achieve their goals</li>
+        <li>Thorough talent auditing to make the most of existing assets</li>
+        <li>Horizon scanning, market mapping and talent tracking </li>
+        <li>Process analysis, improvement advice and consultancys</li>
+        <li>Career counselling and executive coaching from thought leaders and executive peers</li>
+      </ul>
+      <a href="{{ url('services') }}" class="btn--arrow-right">Find out more about our services</a>
+      <a href="{{ url('approach') }}" class="btn--arrow-right">Find out more about our approach</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--Bottom CTA-->
+{% if entry.hasACta %}
+{% include "_includes/_bottom-cta.html" with {
+  ctaMessage: entry.ctaMessage,
+  ctaLocation: entry.ctaLocation,
+  ctaButtonText: entry.ctaButtonText
+} %}
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "_layout" %}
+{% set title = "Mission and Values" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--mission">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">Our Mission and Values</h1>
+      <h2 class="hero__strap">Finding the right people to help you make a difference</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container our-mission">
+  <div class="row">
+    <div class="item item--half">
+      <h3 class="feature__heading">Our Mission</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">You may have spotted the origami animals dotted around this website. We commissioned the paper sculpturist Sipho Mabona to create them for us, because we see origami as a metaphor for how we work. <br><br>
+
+      Given a piece of paper to fold, anyone can come up with something, but the most impressive outcomes require creativity, know-how, accuracy and support. We use our unmatched level of innovation, commitment, knowledge and integrity to get the best results for our clients and candidates.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container our-values">
+  <div class="row">
+    <div class="item item--half">
+      <h3 class="feature__heading">Our Values</h3>
+      <p class="feature__desc">Putting clients and candidates first to create a chain of life-changing outcomes.</p>
+      {% include "_includes/_divider.html" %}
+    </div>
+    <div class="item item--full values">
+      {% include "_includes/_value.html"  with {
+        'title': "Agility and Creativity",
+        'icon': "assets/images/site/icons/creativity.svg",
+        'desc': "Our personalised and responsive approach to talent management and acquisition enables us to work with and around our clients and candidates as and when they need. As true experts, we have all the in-built knowledge and consultancy experience when it comes to acquisitions and management. This allows us to be quicker and more creative with our approach to finding solutions, locating untapped potential and generating strong results."
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Continuous Development and Learning",
+        'icon': "assets/images/site/icons/learning.svg",
+        'desc': "The business world is constantly changing, so each member of the Cadence Partners team personally engages with diverse sources to update their industry awareness. We share our knowledge with each other so that we can continuously give our clients and candidates first-class service. It also helps us to grow our contacts and build new pathways for networking. "
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Diversity and Fairness",
+        'icon': "assets/images/site/icons/diversity.svg",
+        'desc': "Variation brings balance, dynamism and opportunities, so we've built excellent candidate networks in non-traditional areas. We have a superior track record of placing candidates from under-represented minority groups and are objective, transparent and ethical."
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Rigour and Tenacity",
+        'icon': "assets/images/site/icons/rigour.svg",
+        'desc': "The most obvious pathways don't always lead to the best destination. Alongside continual consultation across parties, we meticulously drill down to uncover higher value opportunities and resources, using thorough expert evaluations of candidates to deliver top recruits in the required industry."
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Value and Commitment",
+        'icon': "assets/images/site/icons/commitment.svg",
+        'desc': "As a boutique recruitment business, we care deeply about passing on value to those we work with. Nothing is impossible; even for the most difficult-to-fill roles, we go above and beyond to find people from across different industries who will be suitable. Our experts collaborate to do everything they can to create enduring value for clients, leading to productive and understanding long-term relationships."
+      } %}
+    </div>
+  </div>
+</div>
+
+<!--Bottom CTA-->
+{% if entry.hasACta %}
+{% include "_includes/_bottom-cta.html" with {
+  ctaMessage: entry.ctaMessage,
+  ctaLocation: entry.ctaLocation,
+  ctaButtonText: entry.ctaButtonText
+} %}
+{% endif %}
+
+{% endblock %}

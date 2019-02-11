@@ -1,0 +1,73 @@
+{% extends "_layout" %}
+{% set title = "Jobs" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--jobs">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">Jobs</h1>
+      <h2 class="hero__strap">Find your next incredible position. Search below to browse our openings.</h2>
+    </div>
+  </div>
+</div>
+
+<!--Search Form-->
+
+
+{% set jobs =  craft.entries.section('jobs') %}
+{% if jobs is not empty %}
+<!--Featured Openings-->
+<div class="container break-heading">
+  <div class="row">
+    <div class="item">
+      <h4>All Openings</h4>
+    </div>
+  </div>
+</div>
+
+<!--Job Openings-->
+<div class="container job-main">
+  <div class="blackover"></div>
+	<div class="row job-gallery">
+    {% for job in jobs %}
+        {% include "_includes/_job.html"  with {
+          'closingDate': job.expiryDate,
+          'jobTitle': job.title,
+          'jobDescription': job.jobDescription,
+          'salary': job.salary,
+          'location': job.location,
+          'jobLink': job.url
+        } %}
+    {% endfor %}
+	</div>
+</div>
+{% endif %}
+
+{% if jobs is empty %}
+
+<div class="container no-jobs">
+  <div class="row">
+    <div class="item item--full">
+      <p>Currently we have no open positions. Please contact the team, or check back soon.</p>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+
+<div class="job-folding-panel">
+
+	<div class="job-fold-left"></div> <!-- this is the left fold -->
+
+	<div class="job-fold-right"></div> <!-- this is the right fold -->
+
+	<div class="job-fold-content">
+		<!-- content will be loaded using javascript -->
+	</div>
+
+	<a class="job-close" href="#0"></a>
+</div>
+{% endblock %}

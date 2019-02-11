@@ -1,0 +1,72 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--home">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">{{ entry.mainPageHeading }}</h1>
+      <h2 class="hero__strap">{{ entry.mainPageSubheading }}</h2>
+
+      <div class="hero__button-holder">
+        <a href="{{ siteUrl }}for-clients" class="btn--hero-cta">I'm a Client</a>
+        <a href="{{ siteUrl }}for-candidates" class="btn--secondary">I'm a Candidate</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content-->
+<div class="container cadence-features">
+  <div class="row">
+    <div class="item item--half feature">
+      <img src="{{ siteUrl }}assets/images/site/icons/crane.svg" alt="Crane">
+      <h3 class="feature__heading">Cadence Partners is more than just another executive resourcing business.</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">Cadence Partners is an expert provider of executive search and talent management services for the third sector and wider public sector, including the health and social care, higher education, and local and central government. <br><br>
+
+        We help our clients recruit dynamic professionals who can effectively combine technical capability skills and business acumen with an underlying passion for public service.<br><br>
+        
+        Our creative, considered and consultative approach means that we succeed where others have been unsuccessful. We help organisations to rethink their position, refine their requirements and refresh their candidate pool, reigniting excitement in the positions being recruited.
+      </p>
+      <a href="{{ siteUrl }}about" class="btn--arrow-right">Find Out More</a>
+    </div>
+  </div>
+</div>
+<div class="container cadence-features">
+  <div class="row">
+    <div class="item item--third feature--third">
+      <img src="{{ siteUrl }}assets/images/site/icons/sitting-crane.svg" alt="Crane">
+      <h3 class="feature__heading">Executive Search</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">Organisations are arguably only as good as their people, especially in social sectors. Executive talent is the key to success; flawed appointments are risky, costly and pointless.</p>
+    </div>
+    <div class="item item--third feature--third">
+      <img src="{{ siteUrl }}assets/images/site/icons/rhino.svg" alt="Crane">
+      <h3 class="feature__heading">Interim Management</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">High quality executive interims can provide a competitive advantage, often transforming businesses and driving positive social impact for change-orientated organisations.</p>
+    </div>
+    <div class="item item--third feature--third">
+      <img src="{{ siteUrl }}assets/images/site/icons/elephant.svg" alt="Crane">
+      <h3 class="feature__heading">Advisory Services</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">Cadence Partners is a leading specialist in the development of high quality executive talent that gives organisations the capability to be modern and inclusive.</p>
+    </div>
+    <a href="{{ siteUrl }}services" class="btn--arrow-right">View All Services</a>
+  </div>
+</div>
+
+{% include "_includes/_testimonial.html"  %}
+
+<!--Bottom CTA-->
+{% if entry.hasACta %}
+{% include "_includes/_bottom-cta.html" with {
+  ctaMessage: entry.ctaMessage,
+  ctaLocation: entry.ctaLocation,
+  ctaButtonText: entry.ctaButtonText
+} %}
+{% endif %}
+
+{% endblock %}

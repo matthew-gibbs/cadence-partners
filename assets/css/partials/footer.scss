@@ -1,0 +1,80 @@
+//Footer Styles
+//------------------------------------
+
+.footer {
+  background-color: $brand-color;
+  color: $background-color;
+  margin-bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 2em;
+
+  .row {
+    flex-direction: row;
+  }
+}
+
+//Footer Nav
+.footer-links {
+  text-align: right;
+
+  li {
+    list-style-type: none;
+    color: $background-color;
+    display: block;
+    margin-bottom: 1em;
+    font-family: $heading-font-family;
+    font-weight: normal;
+
+    @include media($m) {
+      display: inline;
+      margin-bottom: 0;
+    }
+  }
+
+  .nav__item--special li {
+    background-color: $highlight-color;
+    padding: 0.5em 0.6em 0.4em 0.6em;
+    color: $background-color;
+    border: 1px solid $highlight-color;
+    border-radius: 100px;
+    transition: background-color $base-duration;
+    position: relative;
+    z-index: 0;
+
+    &:hover {
+      background-color: $brand-color;
+    }
+  }
+}
+
+//Footer right
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+
+  .credit a {
+    color: $background-color;
+    text-decoration: underline;
+  }
+}
+
+
+//Social Links
+
+.social-links {
+  a {
+    color: $background-color;
+    font-family: $icon-font-family;
+    font-size: $h1-font-size;
+    margin-right: 0.3em;
+    transition: color $base-duration;
+
+    &:hover {
+      color: #dcdcdc;
+    }
+  }
+}

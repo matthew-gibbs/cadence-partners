@@ -1,0 +1,45 @@
+{% if specificTestimonials == true %}
+
+<div class="container">
+  <div class="row testimonial-row">
+    <div class="item item--twothirds testimonial-slider">
+      <ul>
+        {% for testimonial in entry.testimonials %}
+        <li class="testimonial-slide">
+          <div class="testimonial">
+            <blockquote cite="{{ testimonial.attestant }}">
+            {{ testimonial.testimonialBody }}
+            </blockquote>
+            <h5>{{ testimonial.attestant }}, <span>{{ testimonial.attestantsPosition }}</span></h5>
+            <p>{{ testimonial.attestantsCompany }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% else %}
+
+<div class="container">
+  <div class="row testimonial-row">
+    <div class="item item--twothirds testimonial-slider">
+      <ul>
+        {% for testimonial in craft.entries.section('testimonials').order('RAND()').limit(3) %}
+        <li class="testimonial-slide">
+          <div class="testimonial">
+            <blockquote cite="{{ testimonial.attestant }}">
+            {{ testimonial.testimonialBody }}
+            </blockquote>
+            <h5>{{ testimonial.attestant }}, <span>{{ testimonial.attestantsPosition }}</span></h5>
+            <p>{{ testimonial.attestantsCompany }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endif %}

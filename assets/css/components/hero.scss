@@ -1,0 +1,163 @@
+//Hero Styling
+
+.hero {
+  margin-top: 0;
+  padding: 1em 0.5em 2em;
+
+  .hero__heading {
+    font-size: $h1-font-size;
+    margin-bottom: 0;
+  }
+
+  .hero__strap {
+    font-size: $h4-font-size;
+    font-weight: 300;
+    font-family: $base-font-family;
+  }
+
+  @include media($s) {
+    .hero__heading {
+      max-width: 60%;
+    }
+  }
+
+  @include media($m) {
+    .hero__heading {
+      font-size: $h1-font-size * 1.2;
+      max-width: 600px;
+      animation: fadeInUp 2s ease;
+    }
+
+    .hero__strap {
+      opacity: 0;
+      animation: fadeInUp 2s ease 0.4s forwards;
+    }
+  }
+}
+
+.hero--with-height {
+  .row {
+    justify-content: center;
+    height: 10em;
+
+    .item {
+      flex-grow: 0;
+    }
+
+    @include media($m) {
+      justify-content: flex-start;
+      align-items: center;
+      height: 15em;
+    }
+  }
+}
+
+.hero--with-background {
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: right 10% bottom;
+
+  @include media($s) {
+    background-size: contain;
+    background-position: right 10% top;
+  }
+}
+
+//Hero Home Styling
+.hero--home {
+  @extend .hero;
+  @extend .hero--with-background;
+  background-color: #ebebeb;
+  background-image: url("../images/site/coloured-koi.png");
+
+  @include media($m) {
+    padding: 3em 0 4em;
+
+    .hero__button-holder {
+      opacity: 0;
+      animation: fadeInUp 2s ease 0.8s forwards;
+    }
+  }
+
+  @include media($l) {
+    padding: 5em 0 6em;
+  }
+}
+
+//Hero Services Styling
+.hero--services {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/blue-bird.png");
+}
+
+//Hero Jobs Styling
+.hero--jobs {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/rhinos.png");
+}
+
+//Hero About Styling
+.hero--about {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/elephant.png");
+  margin-bottom: 0;
+}
+
+//Hero Mission Styling
+.hero--mission {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/rhino-2.png");
+  margin-bottom: 0;
+}
+
+//Hero Clients Styling
+.hero--clients {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/elephants.png");
+  margin-bottom: 0;
+}
+
+//Hero Candidates Styling
+.hero--candidates {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/rhinos.png");
+  margin-bottom: 0;
+}
+
+//Hero Approach Styling
+.hero--approach {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/white-bird.png");
+  margin-bottom: 0;
+}
+
+//Hero Contact Us Styling
+.hero--contact-us {
+  @extend .hero;
+  @extend .hero--with-height;
+  @extend .hero--with-background;
+
+  background-image: url("../images/site/butterfly-green.png");
+  margin-bottom: 0;
+}

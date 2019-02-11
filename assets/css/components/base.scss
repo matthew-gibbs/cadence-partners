@@ -1,0 +1,76 @@
+// Base
+// --------------------------------------------------
+
+// Border box for everything
+* {
+  box-sizing: border-box;
+}
+
+// Always show scrollbar
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: $base-font-size;
+  background-color: $background-color;
+}
+
+// Use ligatures, kerning and font smoothing
+body, button, input, *:before, *:after {
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+  transition: opacity $base-duration;
+}
+
+// Body styling
+body {
+  font-family: $base-font-family;
+  color: $body-text-color;
+  line-height: $base-line-height;
+  background-color: $background-color;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
+  *::selection {
+    background: $highlight-color;
+    color: $background-color;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  font-family: $heading-font-family;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+p {
+  line-height: 1.5;
+}

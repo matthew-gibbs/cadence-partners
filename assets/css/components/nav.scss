@@ -1,0 +1,172 @@
+// Navigation
+// --------------------------------------------------
+//Hamburger Menu
+.nav-toggle {
+  width: 40px;
+  height: 30px;
+  border: none;
+  background: none;
+  position: absolute;
+  right: 1em;
+  top: 1.4em;
+  outline: none;
+  z-index: 5000;
+  display: block;
+  cursor: pointer;
+
+  @include media($m) {
+    display: none;
+  }
+}
+
+.nav-toggle div {
+  width: 30px;
+  height: 2px;
+  border-radius: 5px;
+  background: $border-color;
+  margin: 5px auto;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.nav-open .nav-toggle div {
+  background: $background-color;
+}
+
+.nav-open .nav-toggle .one {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.nav-open .nav-toggle .two {
+  opacity: 0;
+}
+
+.nav-open .nav-toggle .three {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-open .nav--main a,
+.nav-open .nav--main li {
+  opacity: 1
+}
+
+//Main Navigation
+.nav--main {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  z-index: -1000;
+  width: 100%;
+  position: absolute;
+  padding: 0;
+  transition: opacity $base-duration;
+
+  li {
+    list-style-type: none;
+    font-size: $h3-font-size;
+    font-family: $heading-font-family;
+    color: $brand-color;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 1em 0;
+    display: none;
+    transition: color $base-duration;
+
+    &:hover {
+      color: $highlight-color;
+      transition: color $base-duration;
+    }
+
+    .active {
+      color: $highlight-color;
+    }
+  }
+
+  @include media($m) {
+    opacity: 1;
+    position: relative;
+    height: auto;
+    padding-top: 1.1em;
+    padding-left: 1.5em;
+    z-index: 0;
+    float: right;
+    width: auto;
+    display: block;
+
+    .nav__item--special li {
+      background-color: $highlight-color;
+      padding: 0.5em 0.6em 0.3em 0.6em;
+      color: $background-color;
+      border: 1px solid $highlight-color;
+      border-radius: 100px;
+      font-weight: normal;
+      transition: background-color $base-duration;
+      position: relative;
+
+      &:hover {
+        background-color: $brand-color;
+      }
+    }
+  }
+
+  @include media($l) {
+    li {
+      padding: 1em 0 1em 1.2em;
+    }
+
+    .nav__item--highlight li {
+      margin-left: 2em;
+    }
+  }
+}
+
+.nav-open .nav--main {
+  opacity: 1;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  li {
+    color: $background-color;
+    text-align: center;
+    display: block;
+  }
+}
+
+.mobile-holder {
+  @include media-mid($s, 0) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+}
+
+.nav--main,
+.footer-links {
+  li {
+    font-style: normal;
+  }
+  @include media($m) {
+    li {
+      display: inline-block;
+      font-size: $base-font-size * 0.9;
+      margin-left: 1em;
+      height: auto;
+      transition: opacity $base-duration;
+      color: $subheading-text-color;
+    }
+  }
+}
+
+
+// Active Class Styles
+.active {
+  li {
+    color: $highlight-color;
+  }
+}

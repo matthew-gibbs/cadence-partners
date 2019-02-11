@@ -1,0 +1,58 @@
+//Mission and Value Styling
+
+.our-mission{
+  border-top: $base-border;
+  padding: 2em 0 1em 0;
+  margin-bottom: 0;
+
+  .row {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .item {
+    text-align: left;
+
+    p,
+    li {
+      font-family: $base-font-family;
+      font-weight: 300;
+    }
+  }
+}
+
+.our-values {
+  border-top: $base-border;
+  padding: 2em 0 1em 0;
+  margin-bottom: 0;
+  background-color: #fafafa;
+
+  .feature__desc {
+    margin-bottom: 0.5em;
+  }
+
+  .value {
+    margin-top: 1em;
+  }
+
+  .row {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .item {
+    p,
+    li {
+      font-family: $base-font-family;
+      font-weight: 300;
+    }
+  }
+}
+
+.value {
+  img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 0.5em;
+  }
+}

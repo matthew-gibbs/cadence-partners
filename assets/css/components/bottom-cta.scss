@@ -1,0 +1,21 @@
+.bottom-cta-container {
+  border-top: $base-border;
+}
+
+.bottom-cta-row {
+  justify-content: center;
+}
+
+.bottom-cta {
+  text-align: center;
+  margin: 1.5em 0 2em !important;
+
+  a {
+    margin: 0;
+  }
+}
+
+.bottom-cta__heading {
+  font-family: $nav-font-family;
+  font-size: $h3-font-size;
+}

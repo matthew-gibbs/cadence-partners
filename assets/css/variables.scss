@@ -1,0 +1,76 @@
+// Variables
+// --------------------------------------------------
+
+// Colours
+$brand-color: #121627;
+$highlight-color: #008DD0;
+$light-section-color: #fafafa;
+$link-color: $brand-color;
+$border-color: #dcdcdc;
+$background-color: #fff;
+
+$body-text-color: $brand-color;
+$heading-text-color: $brand-color;
+$subheading-text-color: $brand-color;
+
+// Fonts
+$base-font-family: "basic-sans", "Verdana", sans-serif;
+$heading-font-family: "Gilroy-ExtraBold", "Helvetica", Arial, sans-serif;
+$nav-font-family: "Gilroy-Light", "Helvetica", Arial, sans-serif;
+$icon-font-family: "fontawesome";
+
+//Font Weights
+$base-font-weight: 400;
+$heading-font-weight: 700;
+$bold-font-weight: 700;
+
+// Type metrics
+$base-line-height: 1.2;
+$heading-line-height: 1.2;
+
+$heading-margin: 1.2em 0 0.4em 0;
+$paragraph-margin: 0.8em;
+
+// Type scale
+$base-font-size: 16px;
+$h1-font-size: 2.2rem;
+$h2-font-size: 1.7rem;
+$h3-font-size: 1.44rem;
+$h4-font-size: 1.2rem;
+$h5-font-size: 1rem;
+$small-font-size: 0.833rem;
+
+
+// Border
+$base-border-width: 1px;
+$base-border: $base-border-width solid $border-color;
+$base-border-white: $base-border-width solid $background-color;
+$base-border-radius: 4px;
+
+// Grid
+$gutter-width: 1em;
+$half-gutter-width: $gutter-width / 2;
+
+$gutter-width-l: 1.5em;
+$half-gutter-width-l: $gutter-width / 2;
+
+$max-width: 1280px;
+$item-max-width: 800px;
+
+// Animation
+$short-duration: 0.15s;
+$base-duration: 0.3s;
+$long-duration: 0.5s;
+
+// Breakpoints
+$xsmall: 380px; // Mobile portrait
+$small: 640px; // Mobile landscape
+$medium: 800px; // Tablet portrait
+$large: 990px; // Desktop and tablet landscape
+$xlarge: 1200px; // Large desktop and TV
+
+$xs: $xsmall;
+$s: $small;
+$m: $medium;
+$l: $large;
+$xl: $xlarge;

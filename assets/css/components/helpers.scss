@@ -1,0 +1,117 @@
+// Helpers
+// --------------------------------------------------
+
+//BlackOver
+.blackover {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  z-index: 10;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s 0s;
+}
+
+.fold-is-open .blackover {
+  visibility: visible;
+  opacity: 0.8;
+  transition: opacity 0.5s, visibility 0s 1s;
+}
+
+// Invisible but can be seen by screen readers
+.invisible {
+  position: absolute;
+  left: -999em;
+  top: -999em;
+}
+
+// Really gone
+.removed {
+  display: none;
+}
+
+// Clearfix
+.clearfix {
+  zoom: 1;
+  overflow: visible !important;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+  }
+}
+
+// No margin
+.no-margin {
+  margin: 0;
+}
+
+// For testing grids
+.grid-test {
+  .container {
+    background-color: green !important;
+  }
+  .row {
+    background-color: aqua !important;
+  }
+  .item {
+    background-color: red !important;
+  }
+}
+
+//Centering Text
+.centered-text {
+  text-align: center;
+  justify-content: center;
+}
+
+p.centered-text {
+  margin-top: -0.75em;
+  margin-bottom: 2em;
+  color: $subheading-text-color;
+}
+
+// Breakpoint indicator (hide this in production)
+.breakpoint {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: aqua;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 9999;
+
+  &:before {
+    content: '-';
+    width: 30px;
+    display: block;
+    text-align: center;
+
+    @include media($xsmall) {
+      content: 'XS';
+    }
+
+    @include media($small) {
+      content: 'S';
+    }
+
+    @include media($medium) {
+      content: 'M';
+    }
+
+    @include media($large) {
+      content: 'L';
+    }
+
+    @include media($xlarge) {
+      content: 'XL';
+    }
+  }
+}

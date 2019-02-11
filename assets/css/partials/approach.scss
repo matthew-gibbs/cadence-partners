@@ -1,0 +1,34 @@
+.approach-container {
+  border-top: $base-border;
+  padding: 2em 0 1em 0;
+  margin-bottom: 0;
+}
+
+.partnership-model {
+  width: 100%;
+  height: auto;
+  margin: 1.5em 0 1em;
+}
+
+.team-member-container {
+  padding: 0 1em;
+}
+
+.team-member {
+  padding: 1em 1em 0 0;
+
+  img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+  }
+
+  h4 {
+    margin: 0.5em 0 0 0;
+  }
+
+  p {
+    font-weight: 300;
+  }
+}

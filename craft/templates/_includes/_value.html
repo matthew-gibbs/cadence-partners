@@ -1,0 +1,11 @@
+<a href="{{ value-link }}" class="value__link">
+  <div class="value">
+    <img src="{{ siteUrl }}{{ icon }}" alt="Crane">
+    <h5>{{ title }}</h5>
+    {% if isTrimmed %}
+    <p>{{ desc|striptags|slice(0,75)|default('Read more') }}...</p>
+    {% else %}
+    <p>{{ desc }}</p>
+    {% endif %}
+  </div>
+</a>

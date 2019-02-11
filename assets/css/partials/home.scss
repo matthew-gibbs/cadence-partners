@@ -1,0 +1,45 @@
+// Home page Styling
+// --------------------------------------------------
+
+.cadence-features {
+  border-bottom: $base-border;
+  padding-top: 1em;
+  margin-bottom: 0;
+
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .btn--arrow-right {
+    margin-bottom: 2em;
+  }
+}
+
+.feature {
+  text-align: center;
+  padding: 1em 2em 0.5em;
+}
+
+.feature__heading {
+  margin: 0.5em 0 0.25em 0;
+}
+
+.feature__desc {
+  font-size: $base-font-size;
+  font-weight: 300;
+}
+
+.feature--third {
+  @extend .feature;
+
+  padding: 1em 1em 0.5em;
+}
+
+//Break Heading
+.break-heading {
+  background-color: $brand-color;
+  color: $background-color;
+  margin: 0;
+}

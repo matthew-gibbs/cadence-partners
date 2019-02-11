@@ -1,0 +1,66 @@
+// Buttons
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.75em 2em 0.5em;
+  border-radius: 4px;
+  font-weight: normal;
+  font-family: $heading-font-family;
+  text-align: center;
+  transition: background-color 0.3s;
+  margin: 0.5em 1em 0.5em 0;
+
+  &:hover {
+    background-color: $highlight-color;
+    color: $background-color;
+  }
+}
+
+.btn--primary {
+  @extend .btn;
+  background-color: $highlight-color;
+  color: $background-color;
+  border: $highlight-color 2px solid;
+}
+
+.btn--secondary {
+  @extend .btn;
+  background-color: $background-color;
+  border: $brand-color 2px solid;
+}
+
+.btn--hero-cta {
+  @extend .btn;
+  background-color: $brand-color;
+  color: $background-color;
+  border: $brand-color 2px solid;
+}
+
+.btn--arrow-right {
+  @extend .btn;
+  background-color: $highlight-color;
+  color: $background-color;
+  border: $highlight-color 2px solid;
+  position: relative;
+  padding-right: 3em;
+  margin: 0.5em 0;
+
+  &:hover {
+    background-color: $brand-color;
+    color: $background-color;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/site/arrow-right.svg");
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    right: 1.5em;
+  }
+}

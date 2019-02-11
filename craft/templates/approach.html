@@ -1,0 +1,97 @@
+{% extends "_layout" %}
+{% set title = "Our Approach" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--approach">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">Our Approach</h1>
+      <h2 class="hero__strap">A Family of Experts, not Faceless Colleagues</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--full">
+      <h3 class="feature__heading">A Family of Experts</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">We use an innovative method to design an executive resourcing solution, building and managing a bespoke project group of core Cadence Team members and the most suitable Cadence Family partners.</p>
+      <img class="partnership-model" src="{{ siteUrl }}assets/images/site/approach.jpg" alt="Our Partnership Model">
+    </div>
+  </div>
+</div>
+
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--full">
+      <h3 class="feature__heading">Our Unique Approach</h3>
+      {% include "_includes/_divider.html" %}
+    </div>
+    <div class="item item--half">
+      <p class="feature__desc">At Cadence Partners, we have an innovative structure that allows us to design a bespoke executive resourcing solution for each person we work with. <br><br>
+
+      We have a core team of members that manage and oversee operations and relationships. They assign and work with our Cadence Family partners – hand-picked leaders with real expertise in specific areas of top-level talent acquisition and management. <br><br>
+      
+      When a new client or candidate comes on board with us, we build and manage a bespoke project group for them that consists of the best-suited Cadence Partners core staff and Cadence Family partners. This way, we are always able to meet and exceed the expectations of our clients and candidates.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--full">
+      <h3 class="feature__heading">How we work: Trustworthy, Scalable Partnerships</h3>
+      {% include "_includes/_divider.html" %}
+    </div>
+    <div class="item item--half">
+      <p class="feature__desc">First, we identify what is needed for an executive to deliver your vision. We achieve consensus amongst stakeholders and form a unified approach to the project. From this, we work with you to understand and shape the candidate proposition, then create a tailored candidate profile to meet your immediate needs and future goals. <br><br>
+
+      We offer a diverse field of candidates, featuring skilled executives with a strong connection to the values, mission and vision of the organisation. <br><br>
+      
+      We develop high-impact candidate information that is accurate, credible to a senior audience and persuasive. <br><br>
+      
+      Our networking and search activities are creative and comprehensive, whether locally, nationally or globally. Once we've identified the potential matches, we reach out to them individually to assess their fit and gauge their interest.</p>
+    </div>
+    <div class="item item--half">
+      <p class="feature__desc">For those interested, we carry out robust assessment processes, each founded on objectivity, diversity and transparency. At the longlist stage, expert assessments of candidates are carried out by our experienced team. We perform due diligence – for example, deep-dive referencing and social media checks – to ensure the candidate selection is above reproach.<br><br>
+
+      Meanwhile, our business discipline partners introduce candidates to industry experts, so that they can gain insights into prospective roles and digest sector updates.<br><br>
+      
+      We have an ongoing support partnership, supplying our clients and candidates with continuing expert advice, mentoring and executive peer group support to make new working relationships successful.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--full">
+      <h3 class="feature__heading">Equality Throughout</h3>
+      {% include "_includes/_divider.html" %}
+    </div>
+    <div class="item item--half">
+      <p class="feature__desc">We also have strong commitment to achieving workforce diversity, particularly since we are a business of diverse individuals ourselves. We have a range of leadership projects in place to support organisations to increase representation and we maintain diversity awareness for our staff. Ensuring a diverse short-list is a critical objective for us and we dedicate a section within our weekly search update reports on success in this area. We are proud that well over 50% of our client placements, since our foundation, have been from diverse groups.<br><br>
+
+      We pride ourselves on having tough quality assurance measures. Unlike other executive search firms, we still interview candidates in pairs to ensure there is no bias. <br><br>
+      
+      We have a higher diversity record than any other consultancy. Of our most recent assignments, 54% were of black, Asian and minority ethnic groups, 10% identified as LGBT individuals, 36% identified as having a disability and the gender split was almost equal at 45:55.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Bottom CTA-->
+{% if entry.hasACta %}
+{% include "_includes/_bottom-cta.html" with {
+  ctaMessage: entry.ctaMessage,
+  ctaLocation: entry.ctaLocation,
+  ctaButtonText: entry.ctaButtonText
+} %}
+{% endif %}
+
+
+{% endblock %}

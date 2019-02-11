@@ -1,0 +1,741 @@
+@charset "UTF-8";
+/*
+Cadence Partners Styles
+Built by Matt Gibbs - Freelance Digital Designer for Hoxby.
+http://www.hoxby.com
+*/
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom. */
+@import url(vendor/unslider.css);
+@import url("https://use.typekit.net/qyn1yef.css");
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+/** 1. Correct `inline-block` display not defined in IE 8/9. 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
+audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9/10. Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+/* Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background-color: transparent; }
+
+/** Improve readability of focused elements when they are also in an active/hover state. */
+a:active, a:hover { outline: 0; }
+
+/* Text-level semantics ========================================================================== */
+/** Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari and Chrome. */
+dfn { font-style: italic; }
+
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9/10. */
+img { border: 0; }
+
+/** Correct overflow not hidden in IE 9/10/11. */
+svg:not(:root) { overflow: hidden; }
+
+/* Grouping content ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari. */
+figure { margin: 1em 40px; }
+
+/** Address differences between Firefox and other browsers. */
+hr { box-sizing: content-box; height: 0; }
+
+/** Contain overflow in all browsers. */
+pre { overflow: auto; }
+
+/** Address odd `em`-unit font size rendering in all browsers. */
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+/* Forms ========================================================================== */
+/** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
+/** 1. Correct color not being inherited. Known issue: affects color of disabled elements. 2. Correct font properties not being inherited. 3. Address margins set differently in Firefox 4+, Safari, and Chrome. */
+button, input, optgroup, select, textarea { color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address `overflow` set to `hidden` in IE 8/9/10/11. */
+button { overflow: visible; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+input { line-height: normal; }
+
+/** It's recommended that you don't attempt to style these elements. Firefox's implementation doesn't respect box-sizing, padding, or width. 1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/** 1. Address `appearance` set to `searchfield` in Safari and Chrome. 2. Address `box-sizing` set to `border-box` in Safari and Chrome. */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ box-sizing: content-box; /* 2 */ }
+
+/** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** Remove default vertical scrollbar in IE 8/9/10/11. */
+textarea { overflow: auto; }
+
+/** Don't inherit the `font-weight` (applied by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
+optgroup { font-weight: bold; }
+
+/* Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+td, th { padding: 0; }
+
+@-webkit-keyframes fadeInUp { from { opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  to { opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@keyframes fadeInUp { from { opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  to { opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@-webkit-keyframes fadeOutDown { from { opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  to { opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); } }
+
+@keyframes fadeOutDown { from { opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  to { opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); } }
+
+@-webkit-keyframes fadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@keyframes fadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@-webkit-keyframes fadeOut { from { opacity: 1; }
+  to { opacity: 0; } }
+
+@keyframes fadeOut { from { opacity: 1; }
+  to { opacity: 0; } }
+
+@-webkit-keyframes lookUp { 0% { -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+  50% { -webkit-transform: translate(-50%, -10px); transform: translate(-50%, -10px); }
+  100% { -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); } }
+
+@keyframes lookUp { 0% { -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+  50% { -webkit-transform: translate(-50%, -10px); transform: translate(-50%, -10px); }
+  100% { -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); } }
+
+@-webkit-keyframes shake { 10%, 90% { -webkit-transform: translate3d(-1px, 0, 0); transform: translate3d(-1px, 0, 0); }
+  20%, 80% { -webkit-transform: translate3d(2px, 0, 0); transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { -webkit-transform: translate3d(-4px, 0, 0); transform: translate3d(-4px, 0, 0); }
+  40%, 60% { -webkit-transform: translate3d(4px, 0, 0); transform: translate3d(4px, 0, 0); } }
+
+@keyframes shake { 10%, 90% { -webkit-transform: translate3d(-1px, 0, 0); transform: translate3d(-1px, 0, 0); }
+  20%, 80% { -webkit-transform: translate3d(2px, 0, 0); transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { -webkit-transform: translate3d(-4px, 0, 0); transform: translate3d(-4px, 0, 0); }
+  40%, 60% { -webkit-transform: translate3d(4px, 0, 0); transform: translate3d(4px, 0, 0); } }
+
+.invisible { transition: opacity 0.5s ease; opacity: 0.0; }
+
+.visible { transition: opacity 0.5s ease; opacity: 1.0; }
+
+* { box-sizing: border-box; }
+
+html { overflow-y: scroll; overflow-x: hidden; font-size: 16px; background-color: #fff; }
+
+body, button, input, *:before, *:after { -webkit-font-feature-settings: "kern", "liga", "pnum"; font-feature-settings: "kern", "liga", "pnum"; -webkit-font-smoothing: antialiased; }
+
+a { color: #121627; text-decoration: none; transition: opacity 0.3s; }
+
+body { font-family: "basic-sans", "Verdana", sans-serif; color: #121627; line-height: 1.2; background-color: #fff; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+
+body *::-moz-selection { background: #008DD0; color: #fff; }
+
+body *::selection { background: #008DD0; color: #fff; }
+
+h1, h2, h3, h4, h5 { font-weight: normal; font-family: "Gilroy-ExtraBold", "Helvetica", Arial, sans-serif; }
+
+h1 { font-size: 2.2rem; }
+
+h2 { font-size: 1.7rem; }
+
+h3 { font-size: 1.44rem; }
+
+h4 { font-size: 1.2rem; }
+
+h5 { font-size: 1rem; }
+
+p { line-height: 1.5; }
+
+.bottom-cta-container { border-top: 1px solid #dcdcdc; }
+
+.bottom-cta-row { justify-content: center; }
+
+.bottom-cta { text-align: center; margin: 1.5em 0 2em !important; }
+
+.bottom-cta a { margin: 0; }
+
+.bottom-cta__heading { font-family: "Gilroy-Light", "Helvetica", Arial, sans-serif; font-size: 1.44rem; }
+
+.btn, .btn--primary, .btn--secondary, .btn--hero-cta, .btn--arrow-right { display: inline-block; position: relative; padding: 0.75em 2em 0.5em; border-radius: 4px; font-weight: normal; font-family: "Gilroy-ExtraBold", "Helvetica", Arial, sans-serif; text-align: center; transition: background-color 0.3s; margin: 0.5em 1em 0.5em 0; }
+
+.btn:hover, .btn--primary:hover, .btn--secondary:hover, .btn--hero-cta:hover, .btn--arrow-right:hover { background-color: #008DD0; color: #fff; }
+
+.btn--primary { background-color: #008DD0; color: #fff; border: #008DD0 2px solid; }
+
+.btn--secondary { background-color: #fff; border: #121627 2px solid; }
+
+.btn--hero-cta { background-color: #121627; color: #fff; border: #121627 2px solid; }
+
+.btn--arrow-right { background-color: #008DD0; color: #fff; border: #008DD0 2px solid; position: relative; padding-right: 3em; margin: 0.5em 0; }
+
+.btn--arrow-right:hover { background-color: #121627; color: #fff; }
+
+.btn--arrow-right:after { content: ""; position: absolute; background-image: url("../images/site/arrow-right.svg"); top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 1em; height: 1em; background-size: contain; right: 1.5em; }
+
+.container { padding-left: 0.5em; padding-right: 0.5em; margin-bottom: 1em; padding: 0 0.5em; }
+
+@media only screen and (min-width: 990px) { .container { padding-left: 0.5em; padding-right: 0.5em; margin-bottom: 1em; } }
+
+  .container--flush { padding: 0; }
+
+  .container--flush .row { margin-bottom: 0; }
+
+  .container--flush .item { padding: 0; }
+
+.container-with-spacing-top { padding-top: 2em; }
+
+.container-with-spacing-bottom { padding-bottom: 2em; margin-bottom: 0; }
+
+.container--has-border { border-bottom: 1px solid #dcdcdc; }
+
+.row { display: flex; flex-direction: column; flex-wrap: wrap; max-width: 100%; margin: 0 auto; }
+
+@media only screen and (min-width: 800px) { .row { flex-direction: row; } }
+
+@media only screen and (min-width: 1200px) { .row { max-width: 1200px; } }
+
+.row--flush { max-width: 100%; }
+
+@media only screen and (min-width: 380px) { .row--flush { max-width: 1280px; } }
+
+@media only screen and (min-width: 990px) { .row--max-width { max-width: 800px; } }
+
+.item { flex: 1; display: block; min-width: 1px; padding: 0 0.5em; overflow: visible; }
+
+@media only screen and (min-width: 990px) { .item { padding: 0 0.5em; } }
+
+.item--flex { display: flex; }
+
+.item--full { max-width: 100%; flex-basis: 100%; }
+
+@media only screen and (min-width: 800px) { .item--full { flex-basis: 100%; } }
+
+.item--half { max-width: 100%; }
+
+@media only screen and (min-width: 800px) { .item--half { flex-basis: 50%; max-width: 50%; } }
+
+.item--quarter { flex-basis: auto; max-width: 100%; }
+
+@media only screen and (min-width: 800px) { .item--quarter { flex-basis: 25%; max-width: 25%; } }
+
+.item--threequarters { flex-basis: auto; max-width: 100%; }
+
+@media only screen and (min-width: 800px) { .item--threequarters { flex-basis: 75%; max-width: 75%; } }
+
+.item--third { max-width: 100%; }
+
+@media only screen and (min-width: 800px) { .item--third { flex-basis: 33.3333%; max-width: 33.3333%; } }
+
+.item--twothirds { max-width: 100%; }
+
+@media only screen and (min-width: 800px) { .item--twothirds { flex-basis: 66.6666%; max-width: 66.6666%; } }
+
+.item--max-width { max-width: 800px; margin: 0 auto; }
+
+.item--no-margin { margin-bottom: 0; }
+
+@media only screen and (min-width: 800px) { .item--center-right { display: flex; align-items: center; justify-content: flex-end; padding-right: 10%; } }
+
+.item--centered { margin: 0 auto; text-align: center; }
+
+.footer__left { max-width: 50%; flex-basis: 50%; }
+
+@media only screen and (min-width: 800px) { .footer__left { flex-basis: 25%; max-width: 25%; } }
+
+.footer__right { max-width: 50%; flex-basis: 50%; }
+
+@media only screen and (min-width: 800px) { .footer__right { flex-basis: 75%; max-width: 75%; } }
+
+hr { display: block; height: 1px; border: none; border-top: 1px solid #dcdcdc; margin: 0; padding: 0; }
+
+.hero, .hero--home, .hero--services, .hero--jobs, .hero--about, .hero--mission, .hero--clients, .hero--candidates, .hero--approach, .hero--contact-us { margin-top: 0; padding: 1em 0.5em 2em; }
+
+.hero .hero__heading, .hero--home .hero__heading, .hero--services .hero__heading, .hero--jobs .hero__heading, .hero--about .hero__heading, .hero--mission .hero__heading, .hero--clients .hero__heading, .hero--candidates .hero__heading, .hero--approach .hero__heading, .hero--contact-us .hero__heading { font-size: 2.2rem; margin-bottom: 0; }
+
+.hero .hero__strap, .hero--home .hero__strap, .hero--services .hero__strap, .hero--jobs .hero__strap, .hero--about .hero__strap, .hero--mission .hero__strap, .hero--clients .hero__strap, .hero--candidates .hero__strap, .hero--approach .hero__strap, .hero--contact-us .hero__strap { font-size: 1.2rem; font-weight: 300; font-family: "basic-sans", "Verdana", sans-serif; }
+
+@media only screen and (min-width: 640px) { .hero .hero__heading, .hero--home .hero__heading, .hero--services .hero__heading, .hero--jobs .hero__heading, .hero--about .hero__heading, .hero--mission .hero__heading, .hero--clients .hero__heading, .hero--candidates .hero__heading, .hero--approach .hero__heading, .hero--contact-us .hero__heading { max-width: 60%; } }
+
+@media only screen and (min-width: 800px) { .hero .hero__heading, .hero--home .hero__heading, .hero--services .hero__heading, .hero--jobs .hero__heading, .hero--about .hero__heading, .hero--mission .hero__heading, .hero--clients .hero__heading, .hero--candidates .hero__heading, .hero--approach .hero__heading, .hero--contact-us .hero__heading { font-size: 2.64rem; max-width: 600px; -webkit-animation: fadeInUp 2s ease; animation: fadeInUp 2s ease; }
+  .hero .hero__strap, .hero--home .hero__strap, .hero--services .hero__strap, .hero--jobs .hero__strap, .hero--about .hero__strap, .hero--mission .hero__strap, .hero--clients .hero__strap, .hero--candidates .hero__strap, .hero--approach .hero__strap, .hero--contact-us .hero__strap { opacity: 0; -webkit-animation: fadeInUp 2s ease 0.4s forwards; animation: fadeInUp 2s ease 0.4s forwards; } }
+
+.hero--with-height .row, .hero--services .row, .hero--jobs .row, .hero--about .row, .hero--mission .row, .hero--clients .row, .hero--candidates .row, .hero--approach .row, .hero--contact-us .row { justify-content: center; height: 10em; }
+
+.hero--with-height .row .item, .hero--services .row .item, .hero--jobs .row .item, .hero--about .row .item, .hero--mission .row .item, .hero--clients .row .item, .hero--candidates .row .item, .hero--approach .row .item, .hero--contact-us .row .item { flex-grow: 0; }
+
+@media only screen and (min-width: 800px) { .hero--with-height .row, .hero--services .row, .hero--jobs .row, .hero--about .row, .hero--mission .row, .hero--clients .row, .hero--candidates .row, .hero--approach .row, .hero--contact-us .row { justify-content: flex-start; align-items: center; height: 15em; } }
+
+.hero--with-background, .hero--home, .hero--services, .hero--jobs, .hero--about, .hero--mission, .hero--clients, .hero--candidates, .hero--approach, .hero--contact-us { background-size: 40%; background-repeat: no-repeat; background-position: right 10% bottom; }
+
+@media only screen and (min-width: 640px) { .hero--with-background, .hero--home, .hero--services, .hero--jobs, .hero--about, .hero--mission, .hero--clients, .hero--candidates, .hero--approach, .hero--contact-us { background-size: contain; background-position: right 10% top; } }
+
+.hero--home { background-color: #ebebeb; background-image: url("../images/site/coloured-koi.png"); }
+
+@media only screen and (min-width: 800px) { .hero--home { padding: 3em 0 4em; }
+  .hero--home .hero__button-holder { opacity: 0; -webkit-animation: fadeInUp 2s ease 0.8s forwards; animation: fadeInUp 2s ease 0.8s forwards; } }
+
+@media only screen and (min-width: 990px) { .hero--home { padding: 5em 0 6em; } }
+
+.hero--services { background-image: url("../images/site/blue-bird.png"); }
+
+.hero--jobs { background-image: url("../images/site/rhinos.png"); }
+
+.hero--about { background-image: url("../images/site/elephant.png"); margin-bottom: 0; }
+
+.hero--mission { background-image: url("../images/site/rhino-2.png"); margin-bottom: 0; }
+
+.hero--clients { background-image: url("../images/site/elephants.png"); margin-bottom: 0; }
+
+.hero--candidates { background-image: url("../images/site/rhinos.png"); margin-bottom: 0; }
+
+.hero--approach { background-image: url("../images/site/white-bird.png"); margin-bottom: 0; }
+
+.hero--contact-us { background-image: url("../images/site/butterfly-green.png"); margin-bottom: 0; }
+
+.image-container { margin: 2em 0; }
+
+.in-text-image { width: 100%; height: auto; border-radius: 4px; }
+
+.nav-toggle { width: 40px; height: 30px; border: none; background: none; position: absolute; right: 1em; top: 1.4em; outline: none; z-index: 5000; display: block; cursor: pointer; }
+
+@media only screen and (min-width: 800px) { .nav-toggle { display: none; } }
+
+.nav-toggle div { width: 30px; height: 2px; border-radius: 5px; background: #dcdcdc; margin: 5px auto; transition: all 0.3s; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+
+.nav-open .nav-toggle div { background: #fff; }
+
+.nav-open .nav-toggle .one { -webkit-transform: rotate(45deg) translate(4px, 4px); transform: rotate(45deg) translate(4px, 4px); }
+
+.nav-open .nav-toggle .two { opacity: 0; }
+
+.nav-open .nav-toggle .three { -webkit-transform: rotate(-45deg) translate(6px, -6px); transform: rotate(-45deg) translate(6px, -6px); }
+
+.nav-open .nav--main a, .nav-open .nav--main li { opacity: 1; }
+
+.nav--main { opacity: 0; height: 0; margin: 0; z-index: -1000; width: 100%; position: absolute; padding: 0; transition: opacity 0.3s; }
+
+.nav--main li { list-style-type: none; font-size: 1.44rem; font-family: "Gilroy-ExtraBold", "Helvetica", Arial, sans-serif; color: #121627; font-weight: normal; cursor: pointer; padding: 1em 0; display: none; transition: color 0.3s; }
+
+.nav--main li:hover { color: #008DD0; transition: color 0.3s; }
+
+.nav--main li .active { color: #008DD0; }
+
+@media only screen and (min-width: 800px) { .nav--main { opacity: 1; position: relative; height: auto; padding-top: 1.1em; padding-left: 1.5em; z-index: 0; float: right; width: auto; display: block; }
+  .nav--main .nav__item--special li { background-color: #008DD0; padding: 0.5em 0.6em 0.3em 0.6em; color: #fff; border: 1px solid #008DD0; border-radius: 100px; font-weight: normal; transition: background-color 0.3s; position: relative; }
+  .nav--main .nav__item--special li:hover { background-color: #121627; } }
+
+@media only screen and (min-width: 990px) { .nav--main li { padding: 1em 0 1em 1.2em; }
+  .nav--main .nav__item--highlight li { margin-left: 2em; } }
+
+.nav-open .nav--main { opacity: 1; height: 100vh; width: 100%; z-index: 1000; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.8); }
+
+.nav-open .nav--main li { color: #fff; text-align: center; display: block; }
+
+@media only screen and (max-width: 640px) and (min-width: 0) { .mobile-holder { position: absolute; top: 50%; left: 0; width: 100%; -webkit-transform: translateY(-50%); transform: translateY(-50%); } }
+
+.nav--main li, .footer-links li { font-style: normal; }
+
+@media only screen and (min-width: 800px) { .nav--main li, .footer-links li { display: inline-block; font-size: 14.4px; margin-left: 1em; height: auto; transition: opacity 0.3s; color: #121627; } }
+
+.active li { color: #008DD0; }
+
+.testimonial-row { justify-content: center; }
+
+.unslider { width: auto; display: flex; justify-content: center; padding: 2em 0; }
+
+.testimonial { padding: 0; }
+
+.testimonial blockquote { position: relative; margin-bottom: 2em; }
+
+.testimonial blockquote:before, .testimonial blockquote:after { position: absolute; color: #008DD0; font-size: 2em; }
+
+.testimonial blockquote:before { content: open-quote; top: -0.25em; left: -0.4em; }
+
+.testimonial blockquote:after { content: close-quote; bottom: -0.25em; right: -0.4em; }
+
+.testimonial h5, .testimonial p { text-align: center; margin: 0; }
+
+@font-face { font-family: 'Gilroy-Light'; src: url("../webfonts/35DAC0_0_0.eot"); src: url("../webfonts/35DAC0_0_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/35DAC0_0_0.woff2") format("woff2"), url("../webfonts/35DAC0_0_0.woff") format("woff"), url("../webfonts/35DAC0_0_0.ttf") format("truetype"); }
+
+@font-face { font-family: 'Gilroy-ExtraBold'; src: url("../webfonts/35DAC0_1_0.eot"); src: url("../webfonts/35DAC0_1_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/35DAC0_1_0.woff2") format("woff2"), url("../webfonts/35DAC0_1_0.woff") format("woff"), url("../webfonts/35DAC0_1_0.ttf") format("truetype"); }
+
+.bullets li { line-height: 2; }
+
+.blackover { display: block; position: fixed; top: 0; left: 0; height: 100%; width: 100%; background-color: #000; opacity: 0; z-index: 10; visibility: hidden; transition: opacity 0.5s, visibility 0s 0s; }
+
+.fold-is-open .blackover { visibility: visible; opacity: 0.8; transition: opacity 0.5s, visibility 0s 1s; }
+
+.invisible { position: absolute; left: -999em; top: -999em; }
+
+.removed { display: none; }
+
+.clearfix { zoom: 1; overflow: visible !important; }
+
+.clearfix:after { content: ''; display: block; clear: both; height: 0; }
+
+.no-margin { margin: 0; }
+
+.grid-test .container { background-color: green !important; }
+
+.grid-test .row { background-color: aqua !important; }
+
+.grid-test .item { background-color: red !important; }
+
+.centered-text { text-align: center; justify-content: center; }
+
+p.centered-text { margin-top: -0.75em; margin-bottom: 2em; color: #121627; }
+
+.breakpoint { display: block; position: fixed; bottom: 0; left: 0; background-color: aqua; padding: 10px; font-weight: bold; z-index: 9999; }
+
+.breakpoint:before { content: '-'; width: 30px; display: block; text-align: center; }
+
+@media only screen and (min-width: 380px) { .breakpoint:before { content: 'XS'; } }
+
+@media only screen and (min-width: 640px) { .breakpoint:before { content: 'S'; } }
+
+@media only screen and (min-width: 800px) { .breakpoint:before { content: 'M'; } }
+
+@media only screen and (min-width: 990px) { .breakpoint:before { content: 'L'; } }
+
+@media only screen and (min-width: 1200px) { .breakpoint:before { content: 'XL'; } }
+
+a { font-weight: 700; transition: color 0.3s; }
+
+a:hover { color: black; }
+
+.about-cadence { border-top: 1px solid #dcdcdc; padding: 2em 0 1em 0; margin-bottom: 0; }
+
+.about-cadence:nth-of-type(2n+1) { background-color: #fafafa; }
+
+.about-cadence .row { align-items: flex-start; justify-content: flex-start; }
+
+.about-cadence .item p, .about-cadence .item li { font-family: "basic-sans", "Verdana", sans-serif; font-weight: 300; }
+
+.values-container, .approach-container { padding: 2em 0; margin-bottom: 0; }
+
+.values-container { border-top: 1px solid #dcdcdc; background-color: #fafafa; }
+
+.values { display: flex; flex-direction: row; flex-wrap: wrap; margin: 1em 0 0.5em; }
+
+@media only screen and (min-width: 800px) { .values { flex-direction: row; justify-content: space-between; } }
+
+@media only screen and (min-width: 800px) { .value__link { width: 18%; } }
+
+.value h5 { margin: 0.5em 0 0 0; }
+
+.value p, .value li { font-family: "basic-sans", "Verdana", sans-serif; font-weight: 300; }
+
+.approach-container { border-top: 1px solid #dcdcdc; padding: 2em 0 1em 0; margin-bottom: 0; }
+
+.partnership-model { width: 100%; height: auto; margin: 1.5em 0 1em; }
+
+.team-member-container { padding: 0 1em; }
+
+.team-member { padding: 1em 1em 0 0; }
+
+.team-member img { border-radius: 50%; width: 100px; height: 100px; margin: 0; }
+
+.team-member h4 { margin: 0.5em 0 0 0; }
+
+.team-member p { font-weight: 300; }
+
+.contact-us-container { border-top: 1px solid #dcdcdc; padding: 2em 0 1em 0; margin-bottom: 0; }
+
+.contact-us-container .row { align-items: flex-start; justify-content: center; }
+
+.contact-us-container .item { text-align: left; }
+
+.contact-us-container .item p, .contact-us-container .item li { font-family: "basic-sans", "Verdana", sans-serif; font-weight: 300; }
+
+input#jobpreferences { display: none; }
+
+.contact-us-form { padding-bottom: 2em; }
+
+.contact-us-form h4 { margin-bottom: 0.5em; }
+
+input, textarea { display: inline-block; position: relative; padding: 0.75em; width: 100%; border-radius: 4px; font-weight: normal; font-family: "basic-sans", "Verdana", sans-serif; transition: background-color 0.3s; margin: 0.5em 0; border: 1px solid #dcdcdc; }
+
+textarea { resize: vertical; }
+
+.logos-container { padding: 1em 0; }
+
+.logos-container img { flex-basis: 15%; width: 30%; height: auto; display: inline-block; }
+
+@media only screen and (min-width: 800px) { .logos-container img { width: 15%; } }
+
+.cadence-features { border-bottom: 1px solid #dcdcdc; padding-top: 1em; margin-bottom: 0; }
+
+.cadence-features .row { align-items: center; justify-content: center; }
+
+.cadence-features .btn--arrow-right { margin-bottom: 2em; }
+
+.feature, .feature--third { text-align: center; padding: 1em 2em 0.5em; }
+
+.feature__heading { margin: 0.5em 0 0.25em 0; }
+
+.feature__desc { font-size: 16px; font-weight: 300; }
+
+.feature--third { padding: 1em 1em 0.5em; }
+
+.break-heading { background-color: #121627; color: #fff; margin: 0; }
+
+.footer { background-color: #121627; color: #fff; margin-bottom: 0; padding-top: 1em; padding-bottom: 2em; }
+
+.footer .row { flex-direction: row; }
+
+.footer-links { text-align: right; }
+
+.footer-links li { list-style-type: none; color: #fff; display: block; margin-bottom: 1em; font-family: "Gilroy-ExtraBold", "Helvetica", Arial, sans-serif; font-weight: normal; }
+
+@media only screen and (min-width: 800px) { .footer-links li { display: inline; margin-bottom: 0; } }
+
+.footer-links .nav__item--special li { background-color: #008DD0; padding: 0.5em 0.6em 0.4em 0.6em; color: #fff; border: 1px solid #008DD0; border-radius: 100px; transition: background-color 0.3s; position: relative; z-index: 0; }
+
+.footer-links .nav__item--special li:hover { background-color: #121627; }
+
+.footer__right { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; text-align: right; }
+
+.footer__right .credit a { color: #fff; text-decoration: underline; }
+
+.social-links a { color: #fff; font-family: "fontawesome"; font-size: 2.2rem; margin-right: 0.3em; transition: color 0.3s; }
+
+.social-links a:hover { color: #dcdcdc; }
+
+.service-container { padding: 3em 0; margin-bottom: 0; border-top: 1px solid #dcdcdc; }
+
+.service-container:nth-of-type(2n) { background-color: #fafafa; }
+
+.case-studies { display: flex; flex-direction: column; justify-content: space-around; align-items: left; padding-top: 1.5em; }
+
+@media only screen and (min-width: 800px) { .case-studies { flex-direction: row; justify-content: space-around; align-items: center; } }
+
+@media only screen and (min-width: 990px) { .case-studies { align-items: flex-end; } }
+
+.case-study--small { margin-right: 1em; }
+
+.case-study--small img { width: 225px; height: auto; }
+
+@media only screen and (min-width: 800px) { .case-study--small img { width: 160px; } }
+
+@media only screen and (min-width: 990px) { .case-study--small img { width: 225px; } }
+
+.case-study--small h5 { margin-top: 0.5em; }
+
+ul.process li { position: relative; /* so that pseudoelements are positioned relatively to their "li"s*/ /* use padding-bottom instead of margin-bottom.*/ margin-bottom: 0; /* This overrides previously specified margin-bottom */ padding-bottom: 2.5em; line-height: 1.5; }
+
+ul.process li strong { font-weight: 600; }
+
+ul.process li:after { /* bullets */ content: url("../images/site/bullet.svg"); position: absolute; left: -35px; /*adjust manually*/ top: 0px; }
+
+ul.process li:before { /* lines */ content: ""; position: absolute; left: -23px; /* adjust manually */ border-left: 1px solid black; height: 100%; width: 1codpx; }
+
+ul.process li:first-child:before { /* first li's line */ top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */ }
+
+ul.process li:last-child:before { /* last li's line */ height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */ }
+
+.job-description { padding: 3em 0; }
+
+.job__how-to-apply { margin-bottom: 0.5em; }
+
+.our-mission { border-top: 1px solid #dcdcdc; padding: 2em 0 1em 0; margin-bottom: 0; }
+
+.our-mission .row { align-items: flex-start; justify-content: flex-start; }
+
+.our-mission .item { text-align: left; }
+
+.our-mission .item p, .our-mission .item li { font-family: "basic-sans", "Verdana", sans-serif; font-weight: 300; }
+
+.our-values { border-top: 1px solid #dcdcdc; padding: 2em 0 1em 0; margin-bottom: 0; background-color: #fafafa; }
+
+.our-values .feature__desc { margin-bottom: 0.5em; }
+
+.our-values .value { margin-top: 1em; }
+
+.our-values .row { align-items: flex-start; justify-content: flex-start; }
+
+.our-values .item p, .our-values .item li { font-family: "basic-sans", "Verdana", sans-serif; font-weight: 300; }
+
+.value img { width: 60px; height: auto; margin-bottom: 0.5em; }
+
+.top-nav { border-bottom: 1px solid #dcdcdc; margin-bottom: 0; }
+
+.header { background-color: #fff; position: relative; }
+
+.header .container { margin-bottom: 0; }
+
+.header .item { margin-bottom: 0; }
+
+@media only screen and (min-width: 800px) { .header { padding: 0; } }
+
+.logo-item { align-self: flex-start; display: flex; align-items: center; }
+
+.logo-item a { color: #121627; }
+
+.logo { width: 130px; height: auto; margin: 1em 1em 1em 0; padding-right: 1em; }
+
+.job__tag { border: 2px #121627 solid; padding: 0.2em 0.5em; border-radius: 4px; text-transform: uppercase; }
+
+.job__title { margin: 0.75em 0 0 0; }
+
+.job__desc { margin: 0.5em 0 0 0; font-weight: 300; }
+
+.job__salary-location { font-size: 0.833rem; margin: 0.75em 0 0.2em; }
+
+.no-jobs { background-color: #fafafa; padding: 1em 0 0 0; border-top: 1px solid #dcdcdc; text-align: center; }
+
+.job-main { overflow-x: hidden; background: linear-gradient(left, #fafafa 0%, #fafafa 49%, #f0f0f0 51%, #f0f0f0 100%); margin-bottom: 0; padding: 0; }
+
+.job-main::before { /* never visible - this is used in jQuery to check the current MQ */ display: none; content: "mobile"; }
+
+.job-main > * { transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s; transition: transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s; }
+
+.job-main.fold-is-open > * { /* on mobile - translate .job-main content to the right when the .job-folding-panel is open */ -webkit-transform: translateX(100%); transform: translateX(100%); transition: -webkit-transform 0.5s 0s; transition: transform 0.5s 0s; transition: transform 0.5s 0s, -webkit-transform 0.5s 0s; }
+
+@media only screen and (min-width: 600px) { .job-main.fold-is-open > * { -webkit-transform: translateX(600px); transform: translateX(600px); } }
+
+@media only screen and (min-width: 1100px) { .job-main::before { /* never visible - this is used in jQuery to check the current MQ */ content: "desktop"; }
+  .job-main.fold-is-open > * { /* reset style - on bigger devices we translate the gallery items */ -webkit-transform: translateX(0); transform: translateX(0); } }
+
+.job-gallery::after { clear: both; content: ""; display: table; }
+
+.job-item { width: 100%; text-align: left; /* Force Hardware Acceleration */ -webkit-transform: translateZ(0); transform: translateZ(0); -webkit-backface-visibility: hidden; backface-visibility: hidden; transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s; transition: transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s; z-index: 20; padding: 2em; }
+
+.job-item:nth-of-type(even) { background-color: #fafafa; }
+
+.job-item:nth-of-type(odd) { background-color: #f0f0f0; }
+
+@media only screen and (min-width: 800px) { .job-item { padding: 3em; }
+  .job-item:nth-of-type(4n+1), .job-item:nth-of-type(2n) { background-color: #fafafa; }
+  .job-item:nth-of-type(4n+2), .job-item:nth-of-type(4n+3) { background-color: #f0f0f0; } }
+
+@media only screen and (min-width: 1100px) { .fold-is-open .job-item { transition: -webkit-transform 0.5s 0s; transition: transform 0.5s 0s; transition: transform 0.5s 0s, -webkit-transform 0.5s 0s; -webkit-transform: translateX(-400px); transform: translateX(-400px); }
+  .fold-is-open .job-item * { opacity: 0.5; transition: opacity 0.3s; }
+  .fold-is-open .job-item:nth-of-type(2n) { -webkit-transform: translateX(400px); transform: translateX(400px); } }
+
+/* --------------------------------
+
+folding panel
+
+-------------------------------- */
+.job-folding-panel { position: fixed; z-index: 100; top: 0; left: 0; height: 100vh; width: 100%; visibility: hidden; overflow: hidden; transition: visibility 0s 0.9s; }
+
+.job-folding-panel .job-fold-left, .job-folding-panel .job-fold-right { /* the :after elements of .job-job-fold-left and .job-fold-right are the 2 fold sides */ width: 100%; height: 100vh; overflow: hidden; position: relative; /* enable a 3D-space for children elements */ -webkit-perspective: 2000px; perspective: 2000px; }
+
+.job-folding-panel .job-fold-left::after, .job-folding-panel .job-fold-right::after { /* 2 fold sides */ content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%; /* Force Hardware Acceleration */ -webkit-transform: translateZ(0); transform: translateZ(0); -webkit-backface-visibility: hidden; backface-visibility: hidden; transition: background-color 0.5s 0.4s, -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s, background-color 0.5s 0.4s; transition: transform 0.5s 0.4s, background-color 0.5s 0.4s, -webkit-transform 0.5s 0.4s; }
+
+.job-folding-panel .job-fold-right { -webkit-perspective-origin: 0% 50%; perspective-origin: 0% 50%; }
+
+.job-folding-panel .job-fold-right::after { -webkit-transform-origin: right center; transform-origin: right center; -webkit-transform: translateX(-100%) rotateY(-90deg); transform: translateX(-100%) rotateY(-90deg); background-color: #c0c3c3; }
+
+.job-folding-panel .job-fold-left { /* on mobile only the right fold side is visible */ display: none; }
+
+.job-folding-panel .job-fold-left::after { background-color: #f9fafa; }
+
+.job-folding-panel .job-close { /* 'X' close icon */ position: absolute; z-index: 1; display: inline-block; top: 10px; right: 10px; height: 44px; width: 44px; /* image replacement */ overflow: hidden; text-indent: 100%; white-space: nowrap; opacity: 0; transition: opacity 0.2s 0s; }
+
+.job-folding-panel .job-close::after, .job-folding-panel .job-close::before { /* lines of 'X' icon */ content: ''; position: absolute; height: 3px; width: 32px; left: 50%; top: 50%; background-color: #121627; -webkit-backface-visibility: hidden; backface-visibility: hidden; transition: opacity 0.2s; }
+
+.job-folding-panel .job-close::after { -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg); transform: translateX(-50%) translateY(-50%) rotate(45deg); }
+
+.job-folding-panel .job-close::before { -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg); transform: translateX(-50%) translateY(-50%) rotate(-45deg); }
+
+.job-folding-panel.is-open { visibility: visible; transition: visibility 0s 0s; }
+
+.job-folding-panel.is-open .job-fold-right::after, .job-folding-panel.is-open .job-fold-left::after { -webkit-transform: translateX(0); transform: translateX(0); transition: background-color 0.5s 0s, -webkit-transform 0.5s 0s; transition: transform 0.5s 0s, background-color 0.5s 0s; transition: transform 0.5s 0s, background-color 0.5s 0s, -webkit-transform 0.5s 0s; }
+
+.job-folding-panel.is-open .job-fold-right::after { background-color: #f9fafa; }
+
+.job-folding-panel.is-open .job-close { opacity: 1; transition: opacity 0.2s 0.5s; }
+
+@media only screen and (min-width: 600px) { .job-folding-panel { width: 600px; } }
+
+@media only screen and (min-width: 1100px) { .job-folding-panel { left: 50%; right: auto; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 800px; }
+  .job-folding-panel .job-fold-left, .job-folding-panel .job-fold-right { width: 50%; float: left; height: 100%; }
+  .job-folding-panel .job-fold-right { -webkit-perspective-origin: 0% 50%; perspective-origin: 0% 50%; }
+  .job-folding-panel .job-fold-right::after { -webkit-transform-origin: right center; transform-origin: right center; -webkit-transform: translateX(-100%) rotateY(-90deg); transform: translateX(-100%) rotateY(-90deg); }
+  .job-folding-panel .job-fold-left { display: block; -webkit-perspective-origin: 100% 50%; perspective-origin: 100% 50%; }
+  .job-folding-panel .job-fold-left::after { -webkit-transform-origin: left center; transform-origin: left center; -webkit-transform: translateX(100%) rotateY(90deg); transform: translateX(100%) rotateY(90deg); } }
+
+.job-fold-content { position: absolute; top: 0; left: 0; height: 100%; width: 100%; padding: 4em 2em; visibility: hidden; transition: visibility 0s 0.4s; }
+
+.is-open .job-fold-content { overflow-y: scroll; -webkit-overflow-scrolling: touch; visibility: visible; transition: visibility 0s 0.5s; }
+
+.is-open .job-fold-content > * { opacity: 1; }
+
+@media only screen and (min-width: 1100px) { .job-fold-content { padding: 4em; } }

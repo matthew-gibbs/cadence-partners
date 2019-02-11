@@ -1,0 +1,16 @@
+// Typography
+// --------------------------------------------------
+
+@import url("https://use.typekit.net/qyn1yef.css");
+
+@font-face {font-family: 'Gilroy-Light';src: url('../webfonts/35DAC0_0_0.eot');src: url('../webfonts/35DAC0_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35DAC0_0_0.woff2') format('woff2'),url('../webfonts/35DAC0_0_0.woff') format('woff'),url('../webfonts/35DAC0_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'Gilroy-ExtraBold';src: url('../webfonts/35DAC0_1_0.eot');src: url('../webfonts/35DAC0_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35DAC0_1_0.woff2') format('woff2'),url('../webfonts/35DAC0_1_0.woff') format('woff'),url('../webfonts/35DAC0_1_0.ttf') format('truetype');}
+
+
+.bullets {
+  li {
+    line-height: 2;
+  }
+}

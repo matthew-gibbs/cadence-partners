@@ -1,0 +1,40 @@
+//Header
+//-----------------------------------
+.top-nav {
+  border-bottom: $base-border;
+  margin-bottom: 0;
+}
+
+.header {
+  background-color: $background-color;
+  position: relative;
+
+  .container {
+    margin-bottom: 0;
+  }
+
+  .item {
+    margin-bottom: 0;
+  }
+
+  @include media($m) {
+    padding: 0;
+  }
+}
+
+.logo-item {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $body-text-color;
+  }
+}
+
+.logo {
+  width: 130px;
+  height: auto;
+  margin: 1em 1em 1em 0;
+  padding-right: 1em;
+}

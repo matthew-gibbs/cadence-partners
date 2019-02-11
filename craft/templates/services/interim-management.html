@@ -1,0 +1,66 @@
+{% extends "_layout" %}
+{% set title = "Interim Management" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--about">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">Interim Management</h1>
+      <h2 class="hero__strap">High quality executive interims can provide a competitive advantage.</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container about-cadence">
+  <div class="row">
+    <div class="item item--full">
+      <h3 class="feature__heading">We provide the highest quality interims</h3>
+      {% include "_includes/_divider.html" %}
+    </div>
+    <div class="item item--half">
+      <p class="feature__desc">High quality executive interims can provide a competitive advantage, often transforming businesses and driving positive social impact for change-orientated organisations.<br><br>
+      
+      <strong>Our clients</strong> are organisations across the private, public, and third sectors requiring executive interim talent during times of change, rapid growth or complex restructuring.<br><br>
+
+      <strong>Our recruiters</strong> are prominent, respected individuals in their specialist fields, regularly contributing to thought leadership, academic journals and industry debates.<br><br>
+
+      <strong>Our network</strong> of interim professionals is vast and deep. Established over many years, it enables us to supply first-class management skills quickly.<br><br>
+
+      <strong>Our interims</strong> are committed, engaging, senior-level professionals looking for a challenge and the chance to hit the ground running. They are acutely aware of where their sector or industry is heading and are dedicated to leading that change.
+      </p>
+    </div>
+    <div class="item item--half">
+      <p class="feature__desc"><strong>Our approach</strong> starts with expert analysis of our clients' goals and objectives to create the best interim solutions. Then comes creative thinking and expert input, producing integrated programmes that deliver broad-scale projects and find the missing ingredients.<br><br>
+
+      <strong>Our commitment</strong> to our candidates is part of their success. We deliver practical services to interims new to our markets, including independent advice, skills development, performance reviews and mentoring support. This helps them to deliver business transformation projects, caretaker management work, start-up development and ongoing business support.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container about-cadence">
+  <div class="row">
+    <div class="item item--two-thirds">
+      <h3 class="feature__heading">Disciplines we cover include</h3>
+      {% include "_includes/_divider.html" %}
+      <ul class="bullets">
+        <li>Finance and Commercial</li>
+        <li>HR</li>
+        <li>Procurement</li>
+        <li>Operations</li>
+        <li>Strategy</li>
+        <li>IT</li>
+        <li>Marketing and Communications</li>
+        <li>Turnaround and Transformation</li>
+        <li>Project and Programme Management</li>
+      </ul>
+
+      <a href="{{ url('interim-management-form') }}" class="btn--arrow-right">Sign Up Form Here</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+<div class="item item--half job-item">
+  <a href="{{ jobLink }}">
+      <small class="job__tag">Closing Date: {{ closingDate.format('d.m.y') }}</small>
+      <h4 class="job__title">{{ jobTitle }}</h4>
+      <p class="job__desc">{{ jobDescription|striptags|slice(0,210)|default('Read more') }}...</p>
+      <p class="job__salary-location">{{ salary }} • {{ location }}</p>
+      <b class="btn--arrow-right" href="#">View Job Detail</b>
+  </a>
+</div>

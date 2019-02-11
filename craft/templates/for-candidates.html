@@ -1,0 +1,41 @@
+{% extends "_layout" %}
+{% set title = "Candidates" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--candidates">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">Candidates</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--half">
+      <p class="feature__desc">If you are actively seeking a new senior executive role, we can help you find the perfect position that matches your career goals, attributes and interests. We place some of the best talent in the world in the highest positions within organisations and companies, including directors, chief executives, chairpersons and board level decision makers. <br><br>
+
+      Throughout your journey with us, you will be offered extensive professional support, mentoring and insight from our industry experts. We pride ourselves on our speed, our agility and our ability to build strong and understanding relationships with our candidates. Our dedication to you will continue after you’ve been placed – we want to make sure the transition is seamless and manageable.<br><br>
+      
+      We operate a stringent fairness policy that is open, inclusive and non-discriminatory. A great leader is an asset, regardless of their gender, race or background. Our Partners founded the Aspiring Leaders Programme in response to the challenges women face when they want to move beyond senior management level towards genuine leadership roles. It’s just one of the ways we are securing a future where there is diversity amongst directors.</p>
+
+      <a href="{{ url('jobs') }}" class="btn--arrow-right">See our current opportunities</a>
+      <a href="{{ url('services') }}" class="btn--arrow-right">Learn more about our services</a>
+    </div>
+  </div>
+</div>
+
+
+<!--Bottom CTA-->
+{% if entry.hasACta %}
+{% include "_includes/_bottom-cta.html" with {
+  ctaMessage: entry.ctaMessage,
+  ctaLocation: entry.ctaLocation,
+  ctaButtonText: entry.ctaButtonText
+} %}
+{% endif %}
+
+
+{% endblock %}

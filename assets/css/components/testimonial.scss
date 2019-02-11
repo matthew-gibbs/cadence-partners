@@ -1,0 +1,45 @@
+.testimonial-row {
+  justify-content: center;
+}
+
+.unslider {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+}
+
+.testimonial {
+  padding: 0;
+
+  blockquote {
+    position: relative;
+    margin-bottom: 2em;
+
+
+    &:before,
+    &:after {
+      position: absolute;
+      color: $highlight-color;
+      font-size: 2em;
+    }
+
+    &:before {
+      content: open-quote;
+      top: -0.25em;
+      left: -0.4em;
+    }
+
+    &:after {
+      content: close-quote;
+      bottom: -0.25em;
+      right: -0.4em;
+    }
+  }
+
+  h5,
+  p {
+    text-align: center;
+    margin: 0;
+  }
+}

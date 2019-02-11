@@ -1,0 +1,14 @@
+.logos-container {
+  padding: 1em 0;
+
+  img {
+    flex-basis: 15%;
+    width: 30%;
+    height: auto;
+    display: inline-block;
+
+    @include media($m) { 
+      width: 15%;
+    }
+  }
+}

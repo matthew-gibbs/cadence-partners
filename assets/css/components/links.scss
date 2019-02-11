@@ -1,0 +1,10 @@
+//Links
+
+a {
+  font-weight: $heading-font-weight;
+  transition: color $base-duration;
+
+  &:hover {
+    color: black;
+  }
+}

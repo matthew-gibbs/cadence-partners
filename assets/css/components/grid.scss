@@ -1,0 +1,204 @@
+// Grid
+// --------------------------------------------------
+
+// Container
+.container {
+  padding-left: $half-gutter-width;
+  padding-right: $half-gutter-width;
+  margin-bottom: 1em;
+  padding: 0 0.5em;
+
+  @include media($large) {
+    padding-left: $half-gutter-width-l;
+    padding-right: $half-gutter-width-l;
+    margin-bottom: 1em;
+  }
+} 
+
+.container--flush {
+  padding: 0;
+  
+  .row {
+    margin-bottom: 0;
+  }
+
+  .item {
+    padding: 0;
+  }
+}
+
+.container-with-spacing-top {
+  padding-top: 2em;
+}
+
+.container-with-spacing-bottom {
+  padding-bottom: 2em;
+  margin-bottom: 0;
+}
+
+// Containers with borders
+.container--has-border {
+  border-bottom: $base-border;
+}
+// }
+
+// Row
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include media($m) {
+    flex-direction: row;
+  }
+
+  @include media($xl) {
+    max-width: $xl;
+  }
+}
+
+.row--flush {
+  max-width: 100%;
+
+  @include media($xs) {
+    max-width: $max-width;
+  }
+}
+
+.row--max-width {
+  @include media($l) {
+    max-width: $item-max-width;
+  }
+}
+
+// Items
+.item {
+  flex: 1;
+
+  display: block;
+  min-width: 1px; // Fix weird wrapping issues
+  padding: 0 $half-gutter-width; // Column spacing
+  overflow: visible;
+
+  @include media($large) {
+    padding: 0 $half-gutter-width-l;
+  }
+}
+
+.item--flex {
+  display: flex;
+}
+
+.item--full {
+  max-width: 100%;
+  flex-basis: 100%;
+
+  @include media($m) {
+    flex-basis: 100%;
+  }
+}
+
+.item--half {
+  max-width: 100%;
+
+  @include media($m) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+.item--quarter {
+  flex-basis: auto;
+  max-width: 100%;
+
+  @include media($m) {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+.item--threequarters {
+  flex-basis: auto;
+  max-width: 100%;
+
+  @include media($m) {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+}
+
+.item--third {
+  max-width: 100%;
+
+  @include media($m) {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+.item--twothirds {
+  max-width: 100%;
+
+  @include media($m) {
+    flex-basis: 66.6666%;
+    max-width: 66.6666%;
+  }
+}
+
+.item--max-width {
+  max-width: $item-max-width;
+  margin: 0 auto;
+}
+
+.item--no-margin {
+  margin-bottom: 0;
+}
+
+.item--center-right {
+  @include media($m) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10%;
+  }
+}
+
+.item--centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__left {
+  max-width: 50%;
+  flex-basis: 50%;
+
+  @include media($m) {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+.footer__right {
+  max-width: 50%;
+  flex-basis: 50%;
+
+  @include media($m) {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+}
+
+
+//Divider
+hr {
+  display: block;
+  height: 1px;
+  border: none;
+  border-top: $base-border;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,191 @@
+{% extends "_layout" %}
+{% set title = "About Us" %}
+
+{% block content %}
+
+<!--Hero-->
+<div class="container hero--about">
+  <div class="row">
+    <div class="item item--twothirds">
+      <h1 class="hero__heading">About Us</h1>
+      <h2 class="hero__strap">Who we are, and what we can do for you.</h2>
+    </div>
+  </div>
+</div>
+<div class="container approach-container">
+  <div class="row">
+    <div class="item item--half">
+      <h2 class="feature__heading">Who we are</h2>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">Cadence Partners is dynamic and agile, with over a century of combined experience in executive recruitment, talent acquisition and diversity consulting. We specialise in senior executive and board level positions, using creative search strategies and transparent, auditable selection processes. Our exceptional market intelligence and reach builds the trust of high-performing candidates from a diverse range of backgrounds. <br><br>
+ 
+      We deliver with a hand-picked team, combining seasoned Cadence Partners consultants with special advisors. We collaborate with sector-expert special advisors, who engage with their networks and act as technical assessors.<br><br>
+      
+      Whether you’re a candidate or a client, you will receive market-leading levels of care, including onboarding and feedback – an assurance of our exacting standards and commitment to quality.
+      </p>
+    </div>
+    <div class="item item--half">
+      <h2 class="feature__heading">What we do</h2>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">As a provider of executive resources for not-for-profits, the healthcare sector, government, commercial businesses and organisations, we understand when our clients undergo transformational change due to budgetary constraints and competitive pressures. Many of them are required to achieve a greater impact despite having smaller budgets and more competition. <br><br>
+
+      We are helping them to achieve this through identifying the best thought leaders to create innovation, the best change experts to implement transformation and the best operational leaders to deliver new methods in service delivery.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container about-cadence">
+  <div class="row">
+    <div class="item item--half">
+      <h3 class="feature__heading">With New Clients</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">Throughout your journey, we will work closely with you to understand your immediate needs, short term goals and longer term strategies. We will apply our knowledge of executive talent pools within the sectors we operate and create productive partnerships with our clients. It’s not uncommon for our clients to stay with us for many years over multiple assignments. <br><br>
+
+      We’ll examine your business, your objectives and your goals. Then, we’ll assign you the most suitable, highly qualified people from our staff pool of experts. They will find you the very best creative solutions to your problems so that your business can thrive.        
+      </p>
+    </div>
+    <div class="item item--half">
+      <h3 class="feature__heading">With New Candidates</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">We’ll take time to get to know you.<br><br>
+
+        We add value for candidates with career counselling, interview training, job searching and personal development coaching. When combined as a service within search assignments, each candidate has a valuable opportunity to develop. They leave the process with a positive view of our clients and a long-lasting candidate relationship.
+        </p>
+    </div>
+  </div>
+</div> 
+
+
+<div class="container about-cadence">
+  <div class="row">
+    <div class="item item--half">
+      <h3 class="feature__heading">Our Services</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">We offer talent acquisition solutions across permanent and interim positions at Senior and Board level. These include:
+        <ul class="bullets">
+          <li>Process-driven, transparent executive searches and response handling</li>
+          <li>Discerning and agile interim management</li>
+          <li>Leadership development consultancy from renowned specialists</li>
+          <li>Expert talent consultancy to help businesses achieve their goals</li>
+          <li>Thorough talent auditing to make the most of existing assets</li>
+          <li>Horizon scanning, market mapping and talent tracking</li>
+          <li>Recruitment process analysis, improvement advice and consultancy</li>
+          <li>Career counselling and executive coaching from thought leaders and executive peers</li>
+        </ul>
+      </p>
+      <a href="{{ url('services') }}" class="btn--arrow-right">Our Services</a>
+    </div>
+    <div class="item item--half">
+      <h3 class="feature__heading">Our Scope</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">We work with changemaking professionals across many sectors and industry areas. <br><br>
+        With tight-knit teams across the UK, USA, Western Europe, Japan and Australasia, we have a global reach and international expertise to assist our clients and candidates with the business support they need to do social good. 
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container about-cadence">
+  <div class="row">
+    <div class="item item--full">
+      <h3 class="feature__heading">Meet Our Team</h3>
+      {% include "_includes/_divider.html" %}
+    </div>
+  </div>
+  <div class="row team-member-container">
+    <div class="item item--half team-member">
+      <img src="{{ siteUrl }}assets/images/site/shani.jpeg" alt="Shani Newbold">
+      <h4>Shani Newbold</h4>
+      <p>Shani is the founder and managing partner of Cadence Partners. She has over 18 years’ experience in executive search and selection in the UK and US. She has delivered successful search assignments across local and central government, healthcare, other public sector organisations and the not-for-profit sector. Shani personally leads all of our search assignments across the executive and non-executive spaces. </p>
+    </div>
+    <div class="item item--half team-member">
+      <img src="{{ siteUrl }}assets/images/site/justin.jpeg" alt="Jonathan Roland">
+      <h4>Jonathan Roland</h4>
+      <p>Jonathan has been a key member of the Cadence team since its inception. He has worked on board level appointments for highly specialised organisations with particularly technical requirements and across the public and third sectors.</p>
+    </div>
+    <div class="item item--half team-member">
+      <img src="{{ siteUrl }}assets/images/site/karen.jpeg" alt="Karen McKissock">
+      <h4>Karen McKissock</h4>
+      <p>Karen runs the operational side of the business, having joined the Cadence Partners team in March 2018. She coordinates all of the project management activities associated with the assignments, communicates with candidates and clients and offers senior administrative support to our consultant team in the day-to-day delivery of projects.</p>
+    </div>
+    <div class="item item--half team-member">
+      <img src="{{ siteUrl }}assets/images/site/rachael.jpeg" alt="Rachael Yates">
+      <h4>Rachael Yates</h4>
+      <p>Rachael manages all of our back-office functions, including finance, GDPR, IT and HR. Before joining Cadence Partners in 2015, Rachael worked for the London Ambulance Service in various operational roles, including clinical lead and special programmes lead.</p>
+    </div>
+    <div class="item item--half team-member">
+      <img src="{{ siteUrl }}assets/images/site/christie.jpeg" alt="Christie Butterfield">
+      <h4>Christie Butterfield</h4>
+      <p>Christie is a highly motivated and well-organised executive assistant  who supports the administrative function at Cadence Partners. She thrives on providing key support to all projects with a strong eye for detail and a passion for business.</p>
+    </div>
+    <div class="item item--half team-member">
+      <img src="{{ siteUrl }}assets/images/site/no-pic.jpeg" alt="Agnes Fletcher">
+      <h4>Agnes Fletcher</h4>
+      <p>Agnes has worked with Cadence Partners on executive and trustee recruitment assignments, leadership development programmes and diversity consultancy since 2013. A seasoned public policy professional, Agnes has over 20 years’ executive experience of policy and strategic communications in the public and third sectors. She also has substantial governance experience and non-executive experience from places including Scope, POhWER and Shape Arts.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Values and Mission-->
+<!-- <div class="container values-container">
+  <div class="row">
+    <div class="item item--half">
+      <h3 class="feature__heading">Our Values</h3>
+      {% include "_includes/_divider.html" %}
+    </div>
+    <div class="item item--full values">
+      {% include "_includes/_value.html"  with {
+        'title': "Agility and Creativity",
+        'icon': "assets/images/site/icons/creativity.svg",
+        'desc': "Our personalised and responsive approach to talent management and acquisition enables us to work with and around our clients and candidates as and when they need. As true experts, we have all the in-built knowledge and consultancy experience when it comes to acquisitions and management. This allows us to be quicker and more creative with our approach to finding solutions, locating untapped potential and generating strong results."
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Continuous Development and Learning",
+        'icon': "assets/images/site/icons/learning.svg",
+        'desc': "The business world is constantly changing, so each member of the Cadence Partners team personally engages with diverse sources to update their industry awareness. We share our knowledge with each other so that we can continuously give our clients and candidates first-class service. It also helps us to grow our contacts and build new pathways for networking. "
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Diversity and Fairness",
+        'icon': "assets/images/site/icons/diversity.svg",
+        'desc': "Variation brings balance, dynamism and opportunities, so we’ve built excellent candidate networks in non-traditional areas. We have a superior track record of placing candidates from under-represented minority groups and are objective, transparent and ethical."
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Rigour and Tenacity",
+        'icon': "assets/images/site/icons/rigour.svg",
+        'desc': "The most obvious pathways don't always lead to the best destination. Alongside continual consultation across parties, we meticulously drill down to uncover higher value opportunities and resources, using thorough expert evaluations of candidates to deliver top recruits in the required industry."
+      } %}
+      {% include "_includes/_value.html"  with {
+        'title': "Value and Commitment",
+        'icon': "assets/images/site/icons/commitment.svg",
+        'desc': "As a boutique recruitment business, we care deeply about passing on value to those we work with. Nothing is impossible; even for the most difficult-to-fill roles, we go above and beyond to find people from across different industries who will be suitable. Our experts collaborate to do everything they can to create enduring value for clients, leading to productive and understanding long-term relationships."
+      } %}
+    </div>
+    <div class="item item--half">
+      <a href="{{ url('mission-and-values') }}" class="btn--arrow-right">Our Mission and Values</a>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container approach-container">
+  <div class="row">
+    <div class="item item--half">
+      <h3 class="feature__heading">Our Scope</h3>
+      {% include "_includes/_divider.html" %}
+      <p class="feature__desc">We work with changemaking professionals across many sectors and industry areas. <br><br>
+        With tight-knit teams across the UK, USA, Western Europe, Japan and Australasia, we have a global reach and international expertise to assist our clients and candidates with the business support they need to do social good. 
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<!--Bottom CTA-->
+{% if entry.hasACta %}
+{% include "_includes/_bottom-cta.html" with {
+  ctaMessage: entry.ctaMessage,
+  ctaLocation: entry.ctaLocation,
+  ctaButtonText: entry.ctaButtonText
+} %}
+{% endif %}
+
+
+{% endblock %}
